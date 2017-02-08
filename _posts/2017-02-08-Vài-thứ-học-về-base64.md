@@ -11,18 +11,19 @@ Dành 3 đêm để giải bài decode với encode của khóa c trên [mooc.fi
 - Được dùng để mã hóa và giải mã chuỗi. Ví dụ: Man -> TWFU , TWFU -> Man
 - Cơ bản là chuyển từ 3 byte kí tự sang 4 byte kí tự và ngược lại, 3 byte = 3*8 bit = 24 bit = 4*6 bit
 
-![base64](../images/base64.png)
+![base64](https://github.com/congdv/congdv.github.io/blob/master/images/base64.png)
 
 Bảng kí tự của base64
 
-![base64-table](../images/base64-table.png);
+![base64-table](https://github.com/congdv/congdv.github.io/blob/master/images/base64-table.png);
 # Thuật toán encode 
 1. Từ một chuỗi lớn.
 2. Băm chuỗi thành các block kí tự với mỗi block là 3 byte
 3. Với mỗi block 3 byte mã hóa thành 4 byte(mỗi byte này có 6 bit với 2 bit đầu là 00)
 
 Code sample in c:
-```c
+
+```
 int to_base64_string(const unsigned char *string,unsigned char * base64,const int n){
     if(string == NULL)
         return 0;
@@ -73,7 +74,8 @@ int to_base64_string(const unsigned char *string,unsigned char * base64,const in
 
 
 Code sample in c:
-```c
+
+```
 int from_base64_string(const unsigned char *string,unsigned char * base64, const int n){
     if(string == NULL)
         return 0;
@@ -118,7 +120,8 @@ int from_base64_string(const unsigned char *string,unsigned char * base64, const
 - Sử dụng fseek,ftell để xác định độ lớn của file.
 - fseek được dùng để xác định vị trị trong file 
 - ftell để tính độ dài fstream.
-```c
+
+```
 FILE *f = fopen(filename,"rb");
 //Đưa f trỏ về cuối file stream.
 fseek(f,0,SEEK_END);
