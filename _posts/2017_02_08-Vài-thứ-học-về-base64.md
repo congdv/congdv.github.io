@@ -1,3 +1,8 @@
+---
+layout: default 
+title: "Vài thứ học về base64"
+date: 2017-02-08
+---
 # Encode với Decode [Base64](https://en.wikipedia.org/wiki/Base64)
 
 Dành 3 đêm để giải bài decode với encode của khóa c trên [mooc.fi](http://2016-aalto-c.tmchq.co/en/Module_5/index.html#desc-3-en)
@@ -5,9 +10,11 @@ Dành 3 đêm để giải bài decode với encode của khóa c trên [mooc.fi
 # Kiến thức về base 64
 - Được dùng để mã hóa và giải mã chuỗi. Ví dụ: Man -> TWFU , TWFU -> Man
 - Cơ bản là chuyển từ 3 byte kí tự sang 4 byte kí tự và ngược lại, 3 byte = 3*8 bit = 24 bit = 4*6 bit
+
 ![base64](../images/base64.png)
 
 Bảng kí tự của base64
+
 ![base64-table](../images/base64-table.png);
 # Thuật toán encode 
 1. Từ một chuỗi lớn.
