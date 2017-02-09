@@ -11,11 +11,12 @@ Dành 3 đêm để giải bài decode với encode của khóa c trên [mooc.fi
 - Được dùng để mã hóa và giải mã chuỗi. Ví dụ: Man -> TWFU , TWFU -> Man
 - Cơ bản là chuyển từ 3 byte kí tự sang 4 byte kí tự và ngược lại, 3 byte = 3*8 bit = 24 bit = 4*6 bit
 
-![base64](/images/base64.png)
+![base64](https://cloud.githubusercontent.com/assets/8192210/22764610/421eefbc-ee9e-11e6-9952-0e77e03b9dec.png)
 
 Bảng kí tự của base64
 
-![base64-table](/images/base64-table.png);
+![base64-table](https://cloud.githubusercontent.com/assets/8192210/22764615/47882874-ee9e-11e6-8acf-16824cd25601.png);
+
 # Thuật toán encode 
 1. Từ một chuỗi lớn.
 2. Băm chuỗi thành các block kí tự với mỗi block là 3 byte
