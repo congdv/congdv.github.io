@@ -9,7 +9,7 @@ Dành 3 đêm để giải bài decode với encode của khóa c trên [mooc.fi
 
 # Kiến thức về base 64
 - Được dùng để mã hóa và giải mã chuỗi. Ví dụ: Man -> TWFU , TWFU -> Man
-- Cơ bản là chuyển từ 3 byte kí tự sang 4 byte kí tự và ngược lại, 3 byte = 3`*8 bit = 24 bit = 4`*6 bit
+- Cơ bản là chuyển từ 3 byte kí tự sang 4 byte kí tự và ngược lại, 3 byte = 3`*`8 bit = 24 bit = 4`*`6 bit
 
 ![base64](https://cloud.githubusercontent.com/assets/8192210/22764610/421eefbc-ee9e-11e6-9952-0e77e03b9dec.png)
 
