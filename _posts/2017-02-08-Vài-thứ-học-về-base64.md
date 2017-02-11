@@ -24,7 +24,7 @@ Bảng kí tự của base64
 
 Code sample in c:
 
-```
+```c
 int to_base64_string(const unsigned char *string,unsigned char * base64,const int n){
     if(string == NULL)
         return 0;
@@ -77,7 +77,7 @@ int to_base64_string(const unsigned char *string,unsigned char * base64,const in
 
 Code sample in c:
 
-```
+```c
 int from_base64_string(const unsigned char *string,unsigned char * base64, const int n){
     if(string == NULL)
         return 0;
