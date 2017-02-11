@@ -68,6 +68,7 @@ int to_base64_string(const unsigned char *string,unsigned char * base64,const in
     return k;
 }
 ```
+
 # Thuật toán decode 
 1. Tư một chuỗi lớn cần giải mã base64.
 2. Băm chuỗi thành các block kí tự với mỗi block là 4 byte.
