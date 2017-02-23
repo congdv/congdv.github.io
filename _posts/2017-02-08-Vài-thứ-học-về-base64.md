@@ -3,9 +3,8 @@ layout: default
 title: "Vài thứ học về base64"
 date: 2017-02-08
 ---
-Encode với Decode [Base64](https://en.wikipedia.org/wiki/Base64)
-================================================================
-
+# Encode với Decode [Base64](https://en.wikipedia.org/wiki/Base64)
+<hr>
 Dành 3 đêm để giải bài decode với encode của khóa c trên [mooc.fi](http://2016-aalto-c.tmchq.co/en/Module_5/index.html#desc-3-en)
 
 ## Kiến thức về base 64
@@ -117,7 +116,7 @@ int from_base64_string(const unsigned char *string,unsigned char * base64, const
 }
 ```
 
-# Vài thứ về bài tập này.
+## Vài thứ về bài tập này.
 - Cơ bản cố gắng hoàn thành khóa học về mấy bài cuối.
 - Nắm rõ được đọc và ghi file binary. 
 - Sử dụng fseek,ftell để xác định độ lớn của file.
