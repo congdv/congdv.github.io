@@ -3,7 +3,7 @@ layout: default
 title: "Vài thứ học về base64"
 date: 2017-02-08
 ---
-Encode với Decode [Base64](https://en.wikipedia.org/wiki/Base64)
+**Encode với Decode [Base64](https://en.wikipedia.org/wiki/Base64)**
 <hr>
 Dành 3 đêm để giải bài decode với encode của khóa c trên [mooc.fi](http://2016-aalto-c.tmchq.co/en/Module_5/index.html#desc-3-en)
 
