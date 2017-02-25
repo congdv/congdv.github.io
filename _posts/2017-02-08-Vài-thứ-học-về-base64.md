@@ -132,4 +132,3 @@ int len = ftell(f);
 //Đưa f về vị trí ban đầu khi mới đọc file
 fseek(f,0,SEEK_SET);
 ```
-<code> fseek(f,0,SEEK_SET); </code>
