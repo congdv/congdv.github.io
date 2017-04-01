@@ -1,0 +1,115 @@
+---
+layout: default 
+title: "[TIL] Java"
+date: 2017-04-01
+---
+
+# Lớp trả về hàm static.
+- Đối với lớp cần trả về hàm kiểu static để tránh khai báo một object thì có thể khai báo lớp như sau:
+lớp
+
+```
+public class A {
+	public static void doA(){
+		callB();
+		System.out.println("Do A");
+	}
+	private static void callB(){
+		System.out.println("Call B");
+	}
+	public static void main(String [] args){
+		A.doA();
+	}
+}
+
+```
+Call B
+Do A
+```
+- Có thể gọi trực tiếp A.doA() thay vì cần phải thông qua một đối tượng.
+- Tuy nhiên nếu một lớp cần nhiều hàm private thì dẫn đến hàm private kiểu static sẽ được khai báo rất nhiều.
+
+```
+public class A {
+	public static void doA(){
+		callB();
+		System.out.println("Do A");
+	}
+	private static void callB(){
+    callC();
+		System.out.println("Call B");
+	}
+	private static void callC(){
+    callD();
+    System.out.println("Call C");
+  }
+  private static void callD(){
+    callE();
+    System.out.println("Call D");
+  }
+  private static void callE(){
+    callF();
+    System.out.println("Call E");
+  }
+  private static void callF(){
+    System.out.println("Call F");
+  }
+}
+```
+- Thay vào đó ta có thể dùng instance của lớp đó như sau:
+```
+public class A {
+	static A INSTANCE = null;
+
+	public static A getInstance() {
+		if (INSTANCE == null) {
+			INSTANCE = new A();
+		}
+		return INSTANCE;
+	}
+
+	public void doA() {
+		callB();
+		System.out.println("Do A");
+	}
+
+	private void callB() {
+		callC();
+		System.out.println("Call B");
+	}
+
+	private void callC() {
+		callD();
+		System.out.println("Call C");
+	}
+
+	private void callD() {
+		callE();
+		System.out.println("Call D");
+	}
+
+	private void callE() {
+		callF();
+		System.out.println("Call E");
+	}
+
+	private void callF() {
+		System.out.println("Call F");
+	}
+
+	public static void main(String[] args) {
+		A.getInstance().doA();
+	}
+}
+```
+- Kết quả in ra 
+```
+Call F
+Call E
+Call D
+Call C
+Call B
+Do A
+```
+# Ý kiến
+- Gặp được cách hay nên ghi lại
