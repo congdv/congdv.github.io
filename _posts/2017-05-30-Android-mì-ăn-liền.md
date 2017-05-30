@@ -1,6 +1,6 @@
 Sau khi hoàn thành app mì ăn liền thì tự nhiên nhận ra rất nhiều thứ và rất nhiều câu hỏi khi phát triển app android.
 
-##Ghi lại để khi nào tự trả lời hay tự nhận thức được
+## Ghi lại để khi nào tự trả lời hay tự nhận thức được
 
 Điểm xuất phát là một ít java và một ít lý thuyết đọc ở đâu đó hồi sinh viên
 
