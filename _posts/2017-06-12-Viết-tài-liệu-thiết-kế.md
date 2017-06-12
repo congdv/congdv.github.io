@@ -15,31 +15,33 @@ Sau khoảng hai tháng sau đó, ngồi hì hục tìm trên mạng thì xem đ
 ```
 After writing this design doc, when I went to write the code I was like, oh, I made a lot of these decisions already.
 ```
-- Viết ra những thứ mình sẽ làm dễ dàng hơi khi viết, kiểu nghĩ trước khi viết ra. Vốn hay quên nên việc viết tài liệu rất có ích
+Viết ra những thứ mình sẽ làm dễ dàng hơi khi viết, kiểu nghĩ trước khi viết ra. Vốn hay quên nên việc viết tài liệu rất có ích
 cho những lúc dỡ chứng chả nhớ chi rồi mình sẽ làm gì tiếp.
 
 
 ```
 tell people what you’re doing
 ```
-- Nói rõ mình đã viết những cái gì trong này và bạn có thể dễ dàng biết được những thứ mà tôi đã viết ra, mọi thứ nằm trong này.
+Nói rõ mình đã viết những cái gì trong này và bạn có thể dễ dàng biết được những thứ mà tôi đã viết ra, mọi thứ nằm trong này.
 
 
 
 ```
 the reason you write them is because your requirements & ideas of how things should work will change over time, and it’s useful to track that
 ```
-- Đôi khi trong khi viết code lại nãy sinh ra rất nhiều vấn đề mâu thuẫn, cái này mâu thuẫn cái kia rồi thêm những ý tưởng mới hay 
+Đôi khi trong khi viết code lại nãy sinh ra rất nhiều vấn đề mâu thuẫn, cái này mâu thuẫn cái kia rồi thêm những ý tưởng mới hay 
 là thuật toán mới. Việc xem lại tài liệu như là cách xem lại sự thay đổi khi lập trình, điều này rất hay tránh gây tranh cãi khi 
 làm trong nhóm hay sếp hỏi vì sao làm cách này hay không làm cách kia.
 
 
 
-- Bạn sẽ biết được bạn sẽ làm gì tiếp theo trong ngày hôm nay. 
+Bạn sẽ biết được bạn sẽ làm gì tiếp theo trong ngày hôm nay. 
 
 **Một số tips khi mình học được sau khi viết trước khi code**
-- Viết tài liệu như khi bạn đang thuyết trình với sếp của bạn bạn sẽ làm thế này và vì sao bạn phải làm như vậy.
-- Trước khi viết cần có càng nhiều hình minh hoạ càng tốt. Vì sao ? Bởi vì tiết kiệm thời gian cho người đọc hình dung và bạn không cần đọc hết 
+Viết tài liệu như khi bạn đang thuyết trình với sếp của bạn bạn sẽ làm thế này và vì sao bạn phải làm như vậy.
+
+Trước khi viết cần có càng nhiều hình minh hoạ càng tốt. Vì sao ? Bởi vì tiết kiệm thời gian cho người đọc hình dung và bạn không cần đọc hết 
 để hiểu mức cơ bản của tài liệu bạn đang viết. Lúc xem qua hình thì người đọc hình dung đang nói đến vấn đề gì khi đó họ chỉ cần đọc 
 chi tiết để hiểu rõ mọi thứ về nó.
-- Khi thay đổi ý kiến hay quyết định nhớ cập nhật kèm theo bên dưới mục nội dung đó và nhớ ghi ngày tháng bạn đã chỉnh sửa kèm theo.
+
+Khi thay đổi ý kiến hay quyết định nhớ cập nhật kèm theo bên dưới mục nội dung đó và nhớ ghi ngày tháng bạn đã chỉnh sửa kèm theo.
