@@ -37,7 +37,7 @@ làm trong nhóm hay sếp hỏi vì sao làm cách này hay không làm cách k
 
 Bạn sẽ biết được bạn sẽ làm gì tiếp theo trong ngày hôm nay. 
 
-**Một số tips khi mình học được sau khi viết trước khi code**
+## **Một số tips khi mình học được sau khi viết trước khi code**
 
 Viết tài liệu như khi bạn đang thuyết trình với sếp của bạn bạn sẽ làm thế này và vì sao bạn phải làm như vậy.
 
