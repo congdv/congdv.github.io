@@ -52,3 +52,8 @@ pre {
     color: #1a1a1a;
     overflow: auto;
 }
+li.span {
+    width: 5em;
+    text-align: right;
+    padding-right: .5em;
+}
