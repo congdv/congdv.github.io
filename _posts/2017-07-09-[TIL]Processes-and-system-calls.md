@@ -64,6 +64,11 @@ Như vậy hàm exec() có thẻ đi kèm với các chữ cái sau:
 - v: vector of arguments.
 - p: search the path.
 
+Để quản lý lỗi khi thực hiện gọi hàm ta có thể dùng errno trong errno.h để quản lý. Trong đo:
+- EPERM=1 Operation not permitted
+- ENOENT=2 No such file or directory
+- ESRCH=3 No such process
+- EMULLET=81 Bad haircut -> This value not available on all systems.
 
 
 # Processes 
