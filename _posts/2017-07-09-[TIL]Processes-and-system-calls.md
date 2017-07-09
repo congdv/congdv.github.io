@@ -87,9 +87,10 @@ pid_t pid = fork()
 //Chạy chương trình mới trên process mới.
 execle("/bin/ps","/bin/ps","-ef",NULL)
 ```
-Khi tạo mới một process thì các chương trình được gọi sẽ chạy trên process mới tạo ra. Nếu tạo không thành công thì chương trình mới sẽ thay chương trình hiện tại.
+Khi tạo mới một process thì các chương trình được gọi sẽ chạy trên process mới tạo ra(đúng hơn là chương trình mới thay thế process vừa mới tạo). Nếu tạo không thành công thì chương trình mới sẽ thay chương trình hiện tại.
 
+Vừa tạo mới process làm mình hình dung đến việc phân bào của tế bào:
 
-
+![Tế bào](http://sohanews.sohacdn.com/k:2016/2-shutterstock-260844854-1452567618912-1452584719808/chung-ta-se-khong-ton-tai-neu-su-kien-nay-khong-xay-ra-vao-600-trieu-nam-truoc.jpg)
 
 # Redirect 
