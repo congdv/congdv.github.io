@@ -93,4 +93,9 @@ Vừa tạo mới process làm mình hình dung đến việc phân bào của t
 
 ![Tế bào](http://sohanews.sohacdn.com/k:2016/2-shutterstock-260844854-1452567618912-1452584719808/chung-ta-se-khong-ton-tai-neu-su-kien-nay-khong-xay-ra-vao-600-trieu-nam-truoc.jpg)
 
+```
+Every process will contain the program it’s running, as well as
+space for stack and heap data.
+```
+
 # Redirect 
