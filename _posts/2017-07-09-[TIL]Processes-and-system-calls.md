@@ -149,5 +149,169 @@ Trên hình trên thì kết qủa sẽ được in ra màn hình, ta cũng có 
 
 Như vậy data stream stdout sẽ thay thế bằng một file.
 
+Ngoài ra ta có thể chuyển kèm theo số slot trên *table descriptor*
+
+```
+ps -ef > file.txt 2> error.txt
+```
+Trong đó > là chuyển hương output, ở đây ta thêm số 2> error.txt dựa vào *table descriptor* thì 2 chính là slot error và ta sẽ chuyển tất cả các thông báo lỗi vào một file có tên là error.txt.
+
+Đó cách redirect ta thường hay gặp khi dùng command line.
+
+Còn đối với redirect một process chứa chương trình thì sao? Hay chỉnh bản thân chương trình tự redirect thì sao?
+
+Ta có thể dùng hàm fileno() để xem descriptor value. Ví dụ:
+```
+FILE *f  =open("file.txt","r");
+int descriptor = fileno(f);
+```
+descriptor sẽ trả về gía trị 3 tức là data stream đang trỏ đến file file.txt của chương trình đang chạy đoạn code trên.
+
+Ta có thể dùng hàm dup2() để thay thế slot của description table.
+```
+dup2(fileno(f),1);
+```
+Tức là được data stream của file.txt lên slot 1 tức là slot của stdout. Khi đó table descriptor sẽ như sau:
+
+|#|Data Stream|
+|-|:----------:|
+|0|The keyboard|
+|1|~~The screen~~ file.txt|
+|2|The screen |
+|3|file.txt|
+
+Giống như khi khi chuyển hướng output của ps -ef ở trên.
+
+Ví dụ:
+```
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+int main(){
+    FILE *f = fopen("file.txt","w");
+   
+    dup2(fileno(f),1);
+
+    fprintf(stdout,"This will store in file.txt");
+    return 0;
+}
+```
+Như vậy việc in ra sẽ được lưu ở file.txt.
+
+Đôi khi có những chương trình mà process cha "đẻ" ra nhiều process con mà process cha cần lấy kết qủa của process con để xử lý thì ta phải làm gì để kết nối data stream giữa cha và con. Đó là sử dụng hàm pipe() (ông nối) về cơ bản thì hàm này tạo ra một ống nối có hai đầu là đầu ghi kết qủa vào đầu đọc kết qủa ra như xử lì FIFO dữ liệu.
+
+Khai báo pipe()
+```
+int fd[2];
+if (pipe(fd)== -1){
+    fprintf(stderr,"Cannot create the pipe");
+}
+```
+fd[2] là mảng mô tả ống có 2 đầu ra và vào. Trong đó được quy định là fd[1] là ghi dữ liệu vào ống và fd[0] là đọc dữ liệu từ ống.
+
+Gỉa sử ta có hai process là process cha và process con, process cha muốn đọc dữ liệu mà process con in ra màn hình.
+
+Đối với process con. Lúc này table descriptor trên process con sẽ là:
+|#|Data Stream|
+|-|:----------:|
+|0|The keyboard|
+|1|The screen|
+|2|The screen |
+|3|Read data stream from pipe|
+|4|Write data stream to pipe|
+
+Để process con truyền dữ liệu vào đường ống thì ta phải đóng ngăn không cho đọc dữ liệu từ ống khi viết vào ống(không thể vừa đọc vừa viết được) và redirect vv ông lên slot hiển thị ra màn hình. Lúc này table descriptor sẽ trở thành như sau. 
+|#|Data Stream|
+|-|:----------:|
+|0|The keyboard|
+|1|~~The screen~~ Write data stream to pipe|
+|2|The screen |
+|3|~~Read data stream from pipe~~|
+|4|Write data stream to pipe|
+
+Code:
+```
+dup2(fd[1],1);
+close(fd[0]);
+```
+
+Đối với process cha thì table descriptor lúc đầu là:
+|#|Data Stream|
+|-|:----------:|
+|0|The keyboard|
+|1|The screen|
+|2|The screen |
+|3|Read data stream from pipe|
+|4|Write data stream to pipe|
+
+Và để process cha đọc được dữ liệu từ pipe thì ta phải đóng slot viết vào ống và chuyển slot đọc ống vào slot stdin của process cha. Khi dó:
+|#|Data Stream|
+|-|:----------:|
+|0|~~The keyboard~~ Write data stream to pipe|
+|1|The screen|
+|2|The screen |
+|3|Read data stream from pipe|
+|4|~~Write data stream to pipe~~|
+
+code:
+```
+dup2(fd[0],0
+close(fd[1]);
+```
+
+Ví dụ:
+```
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+
+int main(){
+   
+    int fd[2];
+    if(pipe(fd) == -1){
+        fprintf(stderr,"Cannot create the pipe\n");
+    }
+
+    //Create child process
+    pid_t pid = fork();
+    if(pid == -1) {
+        fprintf(stderr,"Cannot fork new process\n");
+    }
+    if(!pid){
+        //Redirect output child process to pipe
+        dup2(fd[1],1);
+        close(fd[0]);
+        fprintf(stdout,"Redirect this line into pipe");
+    }
+
+    dup2(fd[0],0);
+    close(fd[1]);
+
+    char result_child[255];
+    //Read from stdin of parent process
+    fgets(result_child,255,stdin);
+    puts("Parrent child\n");
+    fflush(stdout);//Clean buffer output
+    puts(result_child);
+}
+```
+
+Tạo ra proces con pid, tại process này sẽ in ra dòng "Redirect this line into pipe", nhưng thay vì in ra nó sẽ được đưa vào pipe và truyền về lại process cha. Process sẽ in ra kết qủa nhận từ process con.
+
+Sử dụng fflush để xóa bộ nhớ đệm khi in ra tại slot 1(stdout). Nếu không dùng fflush thì kết qủa khi in ra message của process con sẽ là Redirect this line into pipeParrent child . Do lúc đầu in chuỗi "Parrent child" sẽ vẫn còn nằm bộ nhớ đệm của slot 1(stdout) nên ta cần làm sạch bộ nhớ đệm tại slot này.
+
+Việc close và dup2 trước và sau có ảnh hưởng gì đến việc đọc và ghi ở trên pipe không? Câu trả lời là có nên nhớ chuyển hướng đầu này của ống trước khi đóng đầu kia của ống.
+
+
+
+
+
+
+
+
+
 
 
