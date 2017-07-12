@@ -100,7 +100,7 @@ space for stack and heap data.
 
 Thỉnh thoảng thì đôi khi process kết thúc nhưng process con(process được fork) vẫn chưa kết thúc. Như vậy để cho process cha chờ cho đến khi process kết thúc ta có thể dùng hàm waitpid(pid,pid_status,options) để chờ cho đến khi process con kết thúc rồi process cha mới dừng.
 
-
+Mỗi process khi bắt đầu chạy thì cũng có kết thúc đôi khi bạn có thể dùng tổ hợp phím Ctrl+c để dừng process khi đó process trở nên process dead. Trong C bạn cũng có thể customize lại khi một chương trình bị dừng lại. Đôi khi một chương trình bị crash và bạn muốn làm sạch như đóng kết nối mạng hay database từ khi bị interupt thì bạn có làm gọn gàng trường khi exit chương trình.
 
 # Redirect 
 
