@@ -27,6 +27,7 @@ tiên từ trái sang:
 Như vậy nếu 4 byte trên khi lưu ở trên bộ nhớ sẽ có thứ tự như sau:
 
 |Địa chỉ bộ nhớ| 0x00 | 0xFF | 0xFFFF | 0xFFFFFF|
+|--------------|------|------|--------|---------|
 |Byte order    | AC   | DC   | 1A     | 2B      |
 
 ## Little Endian
@@ -36,6 +37,7 @@ Trọng số cao được lưu tại đại chỉ bộ nhớ cao, trọng số t
 Như vậy 4 byte khi lưu ở trên bộ nhớ theo littel endian là như sau.
 
 |Địa chỉ bộ nhớ| 0x00 | 0xFF | 0xFFFF | 0xFFFFFF|
+|--------------|------|------|--------|---------|
 |Byte order    | 2B   | 1A   | DC     | AC      |
 
 ## Biết mấy cái này để làm gì?
