@@ -137,6 +137,8 @@ getaddrinfo("www.google.com", "80", &hints, &res);
 # Note 
 
 - *Telnet is a simple network.*
+- Ở trên mô tả đầy đủ theo giao thức TCP(Transmision Control Protocol ) với socket stream, còn đối với UDP (User Datagram Protocol).
+- Đối với UDP gồm server gồm bước tạo socket và bind to port, còn client tạo socket tới server. sử dụng hàm sendto() để gửi và recvfrom() để nhận xem thêm [demo](https://github.com/congdv/udp-demo.git)
 
 
 
