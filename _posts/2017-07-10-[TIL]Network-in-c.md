@@ -158,6 +158,7 @@ Phần code dưới đây giúp mình biết được dùng select() như thế 
 ```
 /*
  * selectserver.c -- a cheezy multiperson chat server
+ http://beej.us/guide/bgnet/examples/selectserver.c
  */
 
 #include <stdio.h>
