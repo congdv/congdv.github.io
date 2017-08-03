@@ -133,12 +133,209 @@ getaddrinfo("www.google.com", "80", &hints, &res);
 
 - Begin talking: Bắt đầu giao tiếp như cách giao tiếp trên của server.
 
+# Slightly Advanced Techniques
+Sử dụng thêm các kĩ thuật nâng cao để giaỉ quyết vấn đề khi server chờ cho client phản hồi lại rồi tiếp tục xử lý tiếp. Giả sử server chờ recv() từ client như mãi không thấy nhận data để send() data tiếp theo cho client. Như vậy một là server sẽ chờ vô hạn và ảnh hưởng tới một loạt xử lý tiếp theo cho xử lý này. 
 
+## Blocking 
+Kĩ thuật dùng để block listener socket trên server cho tới khi data mà client gửi tới
+
+```
+#include <unistd.h>
+#include <fcntl.h>
+.
+.
+.
+sockfd = socket(PF_INET, SOCK_STREAM, 0);
+fcntl(sockfd, F_SETFL, O_NONBLOCK);
+```
+
+## select()—Synchronous I/O Multiplexing
+Hàm select() rất thú vị và mình rất chật vật để có thể hiểu phần nào đó về nó.
+
+Nó sử dụng file descriptor để quản lý và chờ đợi cho đến khi server accept() một kết nối từ client đến server và sử dụng một file escriptor để lưu trữ cho nó. Mỗi lần client kết nối tới server thì gía trị descriptor sẽ tăng lên một và dựa vào gía trị tương ứng để đánh dấu kết nối của client nào.
+
+Phần code dưới đây giúp mình biết được dùng select() như thế nào.
+```
+/*
+ * selectserver.c -- a cheezy multiperson chat server
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <arpa/inet.h>
+#include <netdb.h>
+
+#define PORT "9034"
+
+void *get_in_addr(struct sockaddr *sa){
+    if(sa -> sa_family == AF_INET){
+        //IPv4
+        return &(((struct sockaddr_in*)sa)->sin_addr);
+    }
+
+    return &(((struct sockaddr_in6 *)sa)->sin6_addr);
+}
+
+int main(void)
+{
+    fd_set master; // master file description list
+    fd_set read_fds; // temp file description
+    int fdmax; // maximum file description number
+
+
+    int listener;
+    //newly accept()ed socket description
+    int newfd;
+    struct sockaddr_storage remoteaddr;//client address
+    socklen_t addrlen;
+
+    char buf[256];
+    int nbytes;
+    char remoteIP[INET6_ADDRSTRLEN];
+
+    struct addrinfo hints, *ai, *p;
+
+
+    FD_ZERO(&master);
+    FD_ZERO(&read_fds);
+
+    // get us a socket and bind it
+    memset(&hints, 0, sizeof(hints));
+    hints.ai_family = AF_UNSPEC;
+    hints.ai_socktype = SOCK_STREAM;
+    hints.ai_flags = AI_PASSIVE;
+
+    int rv = getaddrinfo(NULL,PORT,&hints,&ai);
+    if(rv != 0){
+        fprintf(stderr,"selectserver: %s\n",gai_strerror(rv));
+        exit(1);
+    }
+    
+    int reuse = 1;
+
+
+    //Create socket server
+    for(p = ai; p != NULL; p = p->ai_next){
+       listener = socket(p->ai_family,p->ai_socktype,p->ai_protocol);
+       if(listener < 0){
+            continue;
+       }
+
+       setsockopt(listener,SOL_SOCKET,SO_REUSEADDR,&reuse, sizeof(int));
+
+       if(bind(listener,p->ai_addr,p->ai_addrlen) < 0){
+            close(listener);
+            continue;
+       }
+       break;
+
+
+    }
+
+    if(p == NULL){
+        fprintf(stderr,"selectserver: failed to bind\n");
+        exit(2);
+    }
+
+    freeaddrinfo(ai);//All done with this
+
+    if(listen(listener,10) == -1){
+        perror("10 user connect failed");
+        exit(3);
+    }
+
+
+
+    //Add the listener to the master set
+    FD_SET(listener,&master);
+
+    // keep track of the biggest file descriptor
+    fdmax = listener; // so far, it's this one
+
+
+    //main loop
+    int i,j;
+    for(;;){
+        read_fds = master; //copy file descriptor
+        if(select(fdmax +1, &read_fds, NULL, NULL, NULL) == -1){
+            perror("select");
+            exit(4);
+        }
+        // run through the existing connections looking for data to read
+        // stack descriptor socket connection
+        for(i = 0; i <= fdmax; i++){
+            if(FD_ISSET(i,&read_fds)){//we got one!!
+                if(i == listener){
+                    //handle new connectionsitons
+                  addrlen = sizeof(remoteaddr);
+                  newfd = accept(listener,(struct sockaddr *)&remoteaddr,&addrlen);
+
+                  if(newfd == -1){
+                        perror("accept error ");
+                  }else {
+                      //Add to master set
+                      FD_SET(newfd,&master);
+                      if(newfd > fdmax){
+                            fdmax = newfd;
+                      }
+
+                      printf("Selectserver: new connection from %s"
+                              " on socket %d\n",
+                              inet_ntop(remoteaddr.ss_family,
+                                  get_in_addr((struct sockaddr *)&remoteaddr)
+                                  ,remoteIP,
+                                  INET6_ADDRSTRLEN)
+                              ,newfd);
+
+                  }
+                }
+                else {
+                   // handle data from a client
+                   if((nbytes = recv(i,buf,sizeof(buf),0)) <= 0){
+                       if(nbytes == 0){
+                           // conection closed
+                           printf("selectserver: socket %d hung up",i);
+
+                       }else {
+                           perror("recv error");
+                       }
+                       close(i);//close socket error
+                       FD_CLR(i,&master); //remove fd of socket from master set
+
+                   }else {
+                      // we got some data from a client
+                      for(j = 0; j <= fdmax; j++){
+                          //send to everyone
+                          if(FD_ISSET(j,&master)){
+                              //except the listener and ourselves
+                              // Except who send to server
+                              if(j != listener && j !=i){
+                                  if(send(j,buf,nbytes,0) == -1){
+                                      perror("send");
+                                  }
+                              }
+                          }
+                      }
+                   }
+                }
+            }
+        }//end run through the existing connections
+    
+    }//end main loop
+
+    return 0;
+}
+```
 # Note 
 
 - *Telnet is a simple network.*
 - Ở trên mô tả đầy đủ theo giao thức TCP(Transmision Control Protocol ) với socket stream, còn đối với UDP (User Datagram Protocol).
-- Đối với UDP gồm server gồm bước tạo socket và bind to port, còn client tạo socket tới server. sử dụng hàm sendto() để gửi và recvfrom() để nhận xem thêm [demo](https://github.com/congdv/udp-demo.git)
+- Đối với UDP gồm server gồm bước tạo socket và bind to port, còn client tạo socket tới server. sử dụng hàm sendto() để gửi và recvfrom() để nhận xem thêm [demo](https://github.com/congdv/udp-demo.git).
+- Phần Advanced rất chi là phức tạp nên ghi lên để nhớ những gì, có thể một ngày hiểu hoàn toàn vì sao nó hoạt động.
 
 
 
