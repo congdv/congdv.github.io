@@ -72,7 +72,10 @@ const int TRUE = 1, FALSE = 0
 #define FALSE 0
 ```
 - Small related set of constants. -> best
+```
+typedef enum color{RED,WHITE,GREE} color;
+```
 
-[Enum type in C](https://d3c33hcgiwev3.cloudfront.net/_63d8a67f3688cd8b5003e12d730405c5_Enum-type-in-C.pdf?Expires=1502323200&Signature=QpvHEd~FHJaedkkDQBQjbFK5fTvLXFwtK6sKsV-ZiueBJWlBI8-uiCJcYugLpikmoMupEdjZb4rsQPBHdOa56ktQMf7XMUF7G5l7EvNkNLRmmiT0b0uvEndjn17YlbkbnCD98ouh8Yr2x8WvKwVHrlWifv9OLp4rsUdf-hf6qPM_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A)
+[Enum type in C++ 11](https://d3c33hcgiwev3.cloudfront.net/_63d8a67f3688cd8b5003e12d730405c5_Enum-type-in-C.pdf?Expires=1502323200&Signature=QpvHEd~FHJaedkkDQBQjbFK5fTvLXFwtK6sKsV-ZiueBJWlBI8-uiCJcYugLpikmoMupEdjZb4rsQPBHdOa56ktQMf7XMUF7G5l7EvNkNLRmmiT0b0uvEndjn17YlbkbnCD98ouh8Yr2x8WvKwVHrlWifv9OLp4rsUdf-hf6qPM_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A)
 
 
