@@ -61,3 +61,16 @@ inline void swap(T &d,T &s){
 - Step 2- pick the open node least cost - say this node is n
 ```
 
+## 2.7 Enum & Operator Overloading
+- Can use a named const integer - so it is redundant? Okay 
+```
+const int TRUE = 1, FALSE = 0
+```
+- Can use a #define - keep old C style? safety issues
+```
+#define TRUE 1
+#define FALSE 0
+```
+- Small related set of constants. -> best
+
+
