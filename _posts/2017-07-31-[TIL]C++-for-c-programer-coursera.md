@@ -2,8 +2,7 @@
 
 ## 1.4 Using C++ code
 - [4:50] replace `#define` by `const int` and macro function by inline function
-- [6:18] inline keyword, It's compiler directive. Call compiler here a function instead of function call. Because function call cost
-me money, because initialize stack. That is macro work like.
+- [6:18] inline keyword, It's compiler directive. Call compiler here a function instead of function call. Because function call cost me money, because initialize stack. That is macro work like.
 
 ## 1.6 C++ Advantages
 - [7:19] using static_cast<type> for convert type. make safer c convertation.
@@ -29,4 +28,25 @@ inline void swap(T &d,T &s){
     d = s;
     s = temp;
 }
+```
+
+# Module 2 - Basics of Generics and Classes
+## 2.3 Graph Theory & Algorithms
+- Degree of K4 will be 3, so degreen of K5 graph will be n-1
+- Graph theory was intented by a very famous mathematician, Euler(Project euler name) - Leonherd Euler - 1735
+- Bridge quiz, how to go section once on one bridge
+## 2.4 Graph as a Data Structure 
+- Matrix vs list directed graph
+| |1|2|3|4|
+|-:|-:|-:|-:|
+|1|1|1|1|1|
+|2|1|0|0|0|
+|3|0|1|0|1|
+|4|0|1|1|0|
+
+```
+1 -> 1 -> 2 -> 3 -> 4
+2 -> 1
+3 -> 2 -> 4
+4 -> 2 -> 3
 ```
