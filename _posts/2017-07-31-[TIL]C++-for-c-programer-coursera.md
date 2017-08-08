@@ -37,8 +37,9 @@ inline void swap(T &d,T &s){
 - Bridge quiz, how to go section once on one bridge
 ## 2.4 Graph as a Data Structure 
 - Matrix vs list directed graph
+
 | |1|2|3|4|
-|--|:-:|:-:|:-:|
+|---|---|---|---|
 |1|1|1|1|1|
 |2|1|0|0|0|
 |3|0|1|0|1|
