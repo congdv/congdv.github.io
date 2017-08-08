@@ -51,3 +51,13 @@ inline void swap(T &d,T &s){
 3 -> 2 -> 4
 4 -> 2 -> 3
 ```
+![Graph](https://user-images.githubusercontent.com/8192210/29072786-67a26a76-7c73-11e7-868e-b5bcb9b45785.png)
+
+## 2.5 - Dijkstra Shortest Path 
+
+```
+- Find a shortest Path between start and destination node s to d
+- Step 1- include s in a closed and immediate successors of s with their distance in the open set
+- Step 2- pick the open node least cost - say this node is n
+```
+
