@@ -92,4 +92,14 @@ C type extension:
 - In C++ struct is different - struct is a name scope that can include functions(methods) and have different layers of opacity(data hiding). While C++ retains struct it has the new keyword class.
 - Class is almost equivalent to struct - but with different data hiding default.
 
+## 2.10 C++ point
+- In c++98(default in ubuntu) object must be initialized by constructor,
+```
+point p1(2,3);
+```
+- In c++11 object could initialized like initialize of c99 on struct
+```
+point p1 = {2,3};
+```
+
 
