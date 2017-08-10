@@ -78,4 +78,18 @@ typedef enum color{RED,WHITE,GREE} color;
 
 [Enum type in C++ 11](https://d3c33hcgiwev3.cloudfront.net/_63d8a67f3688cd8b5003e12d730405c5_Enum-type-in-C.pdf?Expires=1502323200&Signature=QpvHEd~FHJaedkkDQBQjbFK5fTvLXFwtK6sKsV-ZiueBJWlBI8-uiCJcYugLpikmoMupEdjZb4rsQPBHdOa56ktQMf7XMUF7G5l7EvNkNLRmmiT0b0uvEndjn17YlbkbnCD98ouh8Yr2x8WvKwVHrlWifv9OLp4rsUdf-hf6qPM_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A)
 
+## 2.8 - typedef days
+- << left bit shift 
+- precedence and associativity do not change
+## 2.9 - Natural way to build widgets
+Why add a type?
+- Types are related to domains
+- So when you need to talk about widgets - you want the widget type and actions on widgets
+- C had primitive forms of type extensibility 
+
+C type extension:
+- you can "add" a type using struct
+- In C++ struct is different - struct is a name scope that can include functions(methods) and have different layers of opacity(data hiding). While C++ retains struct it has the new keyword class.
+- Class is almost equivalent to struct - but with different data hiding default.
+
 
