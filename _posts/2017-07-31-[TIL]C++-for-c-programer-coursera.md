@@ -101,5 +101,42 @@ point p1(2,3);
 ```
 point p1 = {2,3};
 ```
+# Module 3 - C++ and OO; Lists
+
+## 3.2 Point and its Constructor
+
+```
+point(double x =0.0, double y = 0.0):x(x),y(y){} //Constructor can point with no argument, one or two argument
+```
+A specical method constructor:
+- point(){x = y = 0;} -> ordinary assignment
+- point(){this->x = 0; this->y = 0} -> this point assigment
+- point():x(0.0),y(0.0){} -> initializer list and these values are initalizations
+Default constructor - the constructor whose signature is void
+
+Assigment means we're mutating the value stored in this item
+
+The constructor is to build the objects and initialize it.
+
+This lets ambiguity be resolved x=x; would not work
+
+## 3.3 - More Constructors
+
+```
+char *s = new char[size]; //get off heap
+int *p = new int(9); //single int initialized c++98
+delete []s; //delete an array
+delete p; //delete single element
+```
+- We can't have multiple destructors
+- Don't worry about memory leaks, Because memory typically gets reallocated by the operating system when your process ends, and most of systems have that built in like a unix system. **If you're using large amounts of memory and you're frequently going to the operating systems, it could be easily slow down what you're doing. So you need to care about this problem** 
+
+```
+slist:~slit(){
+ V
+ "Scope resolution" call it
+....
+}
+```
 
 
