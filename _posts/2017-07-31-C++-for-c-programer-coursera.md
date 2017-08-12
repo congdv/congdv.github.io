@@ -84,4 +84,65 @@ typedef enum color{RED,WHITE,GREE} color;
 
 [Enum type in C++ 11](https://d3c33hcgiwev3.cloudfront.net/_63d8a67f3688cd8b5003e12d730405c5_Enum-type-in-C.pdf?Expires=1502323200&Signature=QpvHEd~FHJaedkkDQBQjbFK5fTvLXFwtK6sKsV-ZiueBJWlBI8-uiCJcYugLpikmoMupEdjZb4rsQPBHdOa56ktQMf7XMUF7G5l7EvNkNLRmmiT0b0uvEndjn17YlbkbnCD98ouh8Yr2x8WvKwVHrlWifv9OLp4rsUdf-hf6qPM_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A)
 
+## 2.8 - typedef days
+- << left bit shift 
+- precedence and associativity do not change
+## 2.9 - Natural way to build widgets
+Why add a type?
+- Types are related to domains
+- So when you need to talk about widgets - you want the widget type and actions on widgets
+- C had primitive forms of type extensibility 
+
+C type extension:
+- you can "add" a type using struct
+- In C++ struct is different - struct is a name scope that can include functions(methods) and have different layers of opacity(data hiding). While C++ retains struct it has the new keyword class.
+- Class is almost equivalent to struct - but with different data hiding default.
+
+## 2.10 C++ point
+- In c++98(default in ubuntu) object must be initialized by constructor,
+```
+point p1(2,3);
+```
+- In c++11 object could initialized like initialize of c99 on struct
+```
+point p1 = {2,3};
+```
+# Module 3 - C++ and OO; Lists
+
+## 3.2 Point and its Constructor
+
+```
+point(double x =0.0, double y = 0.0):x(x),y(y){} //Constructor can point with no argument, one or two argument
+```
+A specical method constructor:
+- point(){x = y = 0;} -> ordinary assignment
+- point(){this->x = 0; this->y = 0} -> this point assigment
+- point():x(0.0),y(0.0){} -> initializer list and these values are initalizations
+Default constructor - the constructor whose signature is void
+
+Assigment means we're mutating the value stored in this item
+
+The constructor is to build the objects and initialize it.
+
+This lets ambiguity be resolved x=x; would not work
+
+## 3.3 - More Constructors
+
+```
+char *s = new char[size]; //get off heap
+int *p = new int(9); //single int initialized c++98
+delete []s; //delete an array
+delete p; //delete single element
+```
+- We can't have multiple destructors
+- Don't worry about memory leaks, Because memory typically gets reallocated by the operating system when your process ends, and most of systems have that built in like a unix system. **If you're using large amounts of memory and you're frequently going to the operating systems, it could be easily slow down what you're doing. So you need to care about this problem** 
+
+```
+slist:~slit(){
+ V
+ "Scope resolution" call it
+....
+}
+```
+
 
