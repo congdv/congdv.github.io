@@ -1,3 +1,9 @@
+---
+layout: article 
+title: "Static library and dynamic library on C"
+date: 2017-04-01
+tag: note
+---
 
 # Protocol
 ```

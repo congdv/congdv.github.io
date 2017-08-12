@@ -1,2 +1,3 @@
 name: congdv
-markdown: rdiscount
+#markdown: rdiscount
+markdown: kramdown

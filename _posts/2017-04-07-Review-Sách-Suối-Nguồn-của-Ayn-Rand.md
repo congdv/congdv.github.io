@@ -1,3 +1,9 @@
+---
+layout: article 
+title: "Sách suối nguồn"
+date: 2016-11-23
+tag: blog
+---
 Tuần vừa rồi giành toàn bộ thời gian rãnh để đọc cuốn Suối Nguồn của Ayn Rand. Hôm nay thì vừa mới đọc xong chương kết thúc mà cứ tươngr là nó vẫn đang diễn ra và mong chờ một điều gì đó.
 
 Kết thúc là hình ảnh Roark đứng trên tòa nhà cao nhất thành phố mang tên Wynand, và mô tả vệc Dominique đi thang máy vượt qua không gian và địa lý để lên học Roark

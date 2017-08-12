@@ -1,3 +1,9 @@
+---
+layout: article 
+title: "Byte Order"
+date: 2017-08-01
+tag: notes
+---
 # Byte order là gì?
 
 Byte order la thứ tự mà mà các bits được lưu trữ trên bộ nhớ. Trong đó có hai dạng byte order là Big Endian và Littel Endian.

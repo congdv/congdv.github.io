@@ -1,3 +1,9 @@
+---
+layout: article 
+title: "C++ for C programer on coursera"
+date: 2017-07-31
+tag: notes
+---
 # Module 1 C++ as better C
 
 ## 1.4 Using C++ code

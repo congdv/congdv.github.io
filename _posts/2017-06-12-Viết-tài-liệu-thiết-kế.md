@@ -1,3 +1,9 @@
+---
+layout: article 
+title: "Viết tài liệu thiết kế"
+date: 2017-06-12
+tag: blog
+---
 Tài liệu đôi khi là một thứ rất xa xỉ khi viết phần mềm. Hồi còn sinh viên thì học xong môn Phân tích thiết kế hệ thống, thì không
 biết dùng nó cái lợi gì, bởi vì khi có được tài liệu thiết kế  xong rồi vào viết code thì kiểu nhớ chi viết nấy, ào ào viết rồi sửa tùm 
 lùm, sau khi xong xuôi nộp cho thầy thì cứ hỏi dành cả đống thời gian cho nó rồi khi viết code có theo nó đâu.

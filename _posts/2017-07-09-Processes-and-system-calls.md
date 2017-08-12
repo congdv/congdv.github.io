@@ -1,3 +1,9 @@
+---
+layout: article 
+title: "Process and systen call "
+date: 2017-07-09
+tag: notes
+---
 # System Call
 
 Trên hệ điều hành Linux, thì người dùng muốn giao tiếp với kernel thì cách đơn giản nhất là sử dụng terminal.
