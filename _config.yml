@@ -15,3 +15,14 @@ prose:
                   label: "date"
                   element: "text"
                   value: "CURRENT_DATETIME"
+            - name: "tags"
+              field:
+                  element: "select"
+                  label: "Add Tags"
+                  placeholder: "choose Tags"
+                  alterable: true
+                  options:
+                      - name: "Blog"
+                        value: "blog"
+                      - name: "Notes"
+                        value: "notes"
