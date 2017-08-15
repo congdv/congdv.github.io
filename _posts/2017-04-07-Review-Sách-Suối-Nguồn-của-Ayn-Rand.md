@@ -1,7 +1,7 @@
 ---
 layout: article 
 title: "Sách suối nguồn"
-date: 2016-11-23
+date: 2017-04-07
 tag: blog
 ---
 Tuần vừa rồi giành toàn bộ thời gian rãnh để đọc cuốn Suối Nguồn của Ayn Rand. Hôm nay thì vừa mới đọc xong chương kết thúc mà cứ tươngr là nó vẫn đang diễn ra và mong chờ một điều gì đó.

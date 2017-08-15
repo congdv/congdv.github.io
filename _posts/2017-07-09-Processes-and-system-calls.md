@@ -1,6 +1,6 @@
 ---
 layout: article 
-title: "Process and systen call "
+title: "Process and system call "
 date: 2017-07-09
 tag: notes
 ---
@@ -9,9 +9,9 @@ tag: notes
 Trên hệ điều hành Linux, thì người dùng muốn giao tiếp với kernel thì cách đơn giản nhất là sử dụng terminal.
 
 ```
-No program can run on the system without the kernel loading it into memory. The kernel creates
-processes and makes sure they get the resources they need. The kernel also watches for processes that
-become too greedy or crash.
+No program can run on the system without the kernel loading it into memory.
+The kernel creates processes and makes sure they get the resources they need.
+The kernel also watches for processes thatbecome too greedy or crash.
 ```
 Memory sẽ lưu trữ ở RAM. Ngoài ra kernel còn sử dụng **driver** để giao tiếp với các thiết bị phần cứng như chuột, bàn phím, màn hình, headphone.
 
@@ -243,8 +243,9 @@ close(fd[0]);
 ```
 
 Đối với process cha thì table descriptor lúc đầu là:
+|-+-----------|
 |#|Data Stream|
-|-|:----------:|
+|-|----------:|
 |0|The keyboard|
 |1|The screen|
 |2|The screen |
