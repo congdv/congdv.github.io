@@ -18,23 +18,20 @@ Sau khoảng hai tháng sau đó, ngồi hì hục tìm trên mạng thì xem đ
 ý kiến của chị này rất hay và phù hợp với mình.
 
 
-```
-After writing this design doc, when I went to write the code I was like, oh, I made a lot of these decisions already.
-```
+> After writing this design doc, when I went to write the code I was like, oh, I made a lot of these decisions already.
+
 Viết ra những thứ mình sẽ làm dễ dàng hơi khi viết, kiểu nghĩ trước khi viết ra. Vốn hay quên nên việc viết tài liệu rất có ích
 cho những lúc dỡ chứng chả nhớ chi rồi mình sẽ làm gì tiếp.
 
 
-```
-tell people what you’re doing
-```
+> tell people what you’re doing
+
 Nói rõ mình đã viết những cái gì trong này và bạn có thể dễ dàng biết được những thứ mà tôi đã viết ra, mọi thứ nằm trong này.
 
 
 
-```
-the reason you write them is because your requirements & ideas of how things should work will change over time, and it’s useful to track that
-```
+> the reason you write them is because your requirements & ideas of how things should work will change over time, and it’s useful to track that
+
 Đôi khi trong khi viết code lại nãy sinh ra rất nhiều vấn đề mâu thuẫn, cái này mâu thuẫn cái kia rồi thêm những ý tưởng mới hay 
 là thuật toán mới. Việc xem lại tài liệu như là cách xem lại sự thay đổi khi lập trình, điều này rất hay tránh gây tranh cãi khi 
 làm trong nhóm hay sếp hỏi vì sao làm cách này hay không làm cách kia.
