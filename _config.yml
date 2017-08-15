@@ -31,3 +31,8 @@ prose:
                   label: "layout"
                   element: "text"
                   value: "article"
+            - name: "published"
+              field:
+              element: "checkbox"
+              label: "Published"
+              value: false
