@@ -1,3 +1,17 @@
 name: congdv
-#markdown: rdiscount
 markdown: kramdown
+prose:
+    rooturl: '_posts'
+    siteurl: 'https://congdv.github.io'
+    metadata:
+        _posts:
+            - name: "layout"
+              field:
+                  label: "layout"
+                  element: "text"
+                  value: "post"
+            - name: "date"
+              field:
+                  label: "date"
+                  element: "text"
+                  value: "CURRENT_DATETIME"
