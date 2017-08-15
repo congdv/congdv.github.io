@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 date: '2017-08-15 12:56 +0700'
 ---
