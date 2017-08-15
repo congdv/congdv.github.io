@@ -2,7 +2,7 @@
 layout: article 
 title: "Static library và dynamic library"
 date: 2017-07-06
-tag: notes
+tag: note
 ---
 # Đặt Vấn Đề
 Ta có chương trình muốn hiển thị ra thông tin sức khỏe của khách hành đến chạy bộ tại phòng Gym bao gồm: Cân nặng, quãng đường chạy bộ, cùng với một hệ 
