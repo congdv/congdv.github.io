@@ -5,11 +5,16 @@ prose:
     siteurl: 'https://congdv.github.io'
     metadata:
         _posts:
+            - name: "title"
+              field:
+                  element: "text"
+                  label: "Title"
+                  value: ""
             - name: "layout"
               field:
                   label: "layout"
                   element: "text"
-                  value: "post"
+                  value: "article"
             - name: "date"
               field:
                   label: "date"
