@@ -1,8 +1,9 @@
 ---
-layout: article 
-title: "Viết tài liệu thiết kế"
-date: 2017-06-12
+layout: article
+title: Viết tài liệu thiết kế
+date: 'Mon Jun 12 2017 07:00:00 GMT+0700 (ICT)'
 tag: blog
+published: true
 ---
 Tài liệu đôi khi là một thứ rất xa xỉ khi viết phần mềm. Hồi còn sinh viên thì học xong môn Phân tích thiết kế hệ thống, thì không
 biết dùng nó cái lợi gì, bởi vì khi có được tài liệu thiết kế  xong rồi vào viết code thì kiểu nhớ chi viết nấy, ào ào viết rồi sửa tùm 
@@ -40,7 +41,7 @@ làm trong nhóm hay sếp hỏi vì sao làm cách này hay không làm cách k
 
 Bạn sẽ biết được bạn sẽ làm gì tiếp theo trong ngày hôm nay. 
 
-## **Một số tips khi mình học được sau khi viết trước khi code**
+### Một số tips khi mình học được sau khi viết trước khi code
 
 Viết tài liệu như khi bạn đang thuyết trình với sếp của bạn bạn sẽ làm thế này và vì sao bạn phải làm như vậy.
 
