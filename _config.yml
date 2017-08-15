@@ -15,11 +15,11 @@ prose:
                   label: "date"
                   element: "text"
                   value: "CURRENT_DATETIME"
-            - name: "tags"
+            - name: "tag"
               field:
                   element: "select"
-                  label: "Add Tags"
-                  placeholder: "choose Tags"
+                  label: "Add Tag"
+                  placeholder: "choose Tag"
                   alterable: true
                   options:
                       - name: "Blog"
