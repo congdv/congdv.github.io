@@ -33,6 +33,6 @@ prose:
                   value: "article"
             - name: "published"
               field:
-              element: "checkbox"
-              label: "Published"
-              value: false
+                  element: "checkbox"
+                  label: "Published"
+                  value: false
