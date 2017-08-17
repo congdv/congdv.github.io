@@ -158,5 +158,6 @@ slist:~slit(){
 
 > [@stackoverflow](https://stackoverflow.com/questions/184710/what-is-the-difference-between-a-deep-copy-and-a-shallow-copy )
 
+## 3.12 Dynamic Data Structure in Standard Template Library(STL)
 
-
+- doubly linked list have bidirectionally
