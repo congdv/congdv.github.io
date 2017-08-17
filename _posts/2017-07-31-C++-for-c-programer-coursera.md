@@ -1,8 +1,9 @@
 ---
-layout: article 
-title: "C++ for C programer on coursera"
-date: 2017-07-31
+layout: article
+title: C++ for C programer on coursera
+date: 'Mon Jul 31 2017 07:00:00 GMT+0700 (ICT)'
 tag: notes
+published: true
 ---
 # Module 1 C++ as better C
 
@@ -145,4 +146,15 @@ slist:~slit(){
 }
 ```
 
+## 3.10 - Deep vs Shallow Copy
+
+- ultization , cost and modification
+- the deep copy is the safest, I can turn over a new copy
+- A "shallow" copy would be a referential copy where the new list head would be the same value as the old list head.
+
+> Shallow copies duplicate as little as possible. A shallow copy of a collection is a copy of the collection structure, not the elements. With a shallow copy, two collections now share the individual elements.
+
+> Deep copies duplicate everything. A deep copy of a collection is two collections with all of the elements in the original collection duplicated.
+
+[@stackoverflow](https://stackoverflow.com/questions/184710/what-is-the-difference-between-a-deep-copy-and-a-shallow-copy )
 
