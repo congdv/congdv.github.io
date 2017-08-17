@@ -156,5 +156,7 @@ slist:~slit(){
 
 > Deep copies duplicate everything. A deep copy of a collection is two collections with all of the elements in the original collection duplicated.
 
-[@stackoverflow](https://stackoverflow.com/questions/184710/what-is-the-difference-between-a-deep-copy-and-a-shallow-copy )
+> [@stackoverflow](https://stackoverflow.com/questions/184710/what-is-the-difference-between-a-deep-copy-and-a-shallow-copy )
+
+
 
