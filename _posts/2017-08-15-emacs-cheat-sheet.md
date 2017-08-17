@@ -20,6 +20,7 @@ tag: notes
 |TAB|the TAB key|
 
 ## Emacs cheat sheet
+
 |Shortcut| Description           |
 |:-------|:---------------------|
 |*C-x prefix* ||
