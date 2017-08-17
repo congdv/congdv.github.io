@@ -7,3 +7,8 @@ tag: notes
 ---
 ## Emacs
 Test prose.io
+
+|Shortcut| Description           |
+|:-------|:---------------------:|
+|a|b|
+{:.ratio-1-3}
