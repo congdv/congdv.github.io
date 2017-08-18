@@ -22,7 +22,7 @@ tag: notes
 ## Emacs cheat sheet
 
 |Shortcut| Description           |
-|:-------|:---------------------|
+|:-------:|:---------------------|
 || *C-x prefix* |
 |C-x C-f| Open a file|
 |C-x C-w| To save a buffer as a other file like *Save As* in other editors|
