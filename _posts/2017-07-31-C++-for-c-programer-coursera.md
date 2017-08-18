@@ -161,3 +161,5 @@ slist:~slit(){
 ## 3.12 Dynamic Data Structure in Standard Template Library(STL)
 
 - doubly linked list have bidirectionally
+
+[Dijkstra's Algorithm](https://www.youtube.com/watch?v=GazC3A4OQTE&t=578s)
