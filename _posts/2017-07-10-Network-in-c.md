@@ -1,8 +1,9 @@
 ---
-layout: article 
-title: "Static library and dynamic library on C"
-date: 2017-04-01
+layout: article
+title: Network in C
 tag: notes
+published: true
+date: '2017-07-10'
 ---
 
 # Protocol
@@ -343,6 +344,3 @@ int main(void)
 - Ở trên mô tả đầy đủ theo giao thức TCP(Transmision Control Protocol ) với socket stream, còn đối với UDP (User Datagram Protocol).
 - Đối với UDP gồm server gồm bước tạo socket và bind to port, còn client tạo socket tới server. sử dụng hàm sendto() để gửi và recvfrom() để nhận xem thêm [demo](https://github.com/congdv/udp-demo.git).
 - Phần Advanced rất chi là phức tạp nên ghi lên để nhớ những gì, có thể một ngày hiểu hoàn toàn vì sao nó hoạt động.
-
-
-
