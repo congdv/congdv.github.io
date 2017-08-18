@@ -1,9 +1,9 @@
 ---
 date: '2017-08-18 13:31 +0700'
 layout: article
-published: false
+published: true
 title: Advanced Programing in the UNIX Environment
-tag: ''
+tag: notes
 ---
 ## Chapter 1 - UNIX System Overview
 
