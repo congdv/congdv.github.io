@@ -3,7 +3,7 @@ layout: article
 title: Network in C
 tag: notes
 published: true
-date: '2017-07-10'
+date: 2017-07-10
 ---
 
 # Protocol
