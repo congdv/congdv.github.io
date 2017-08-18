@@ -23,11 +23,11 @@ tag: notes
 
 |Shortcut| Description           |
 |:-------|:---------------------|
-|*C-x prefix* | |
+|| *C-x prefix* |
 |C-x C-f| Open a file|
 |C-x C-w| To save a buffer as a other file like *Save As* in other editors|
 |C-x C-b| To open ibuffer|
-|*Basic motion command*| |
+|| *Basic motion command*|
 |C-f| Move forward one char|
 |C-b| Move backward one char|
 |C-p| Move previous one line|
