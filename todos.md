@@ -5,5 +5,5 @@ permalink: /todos/ # ---> Path of the page
 ---
 
 ## My Todos
-- [] Chat application command line
+- [ ] Chat application command line
 - [ ] Get certificate from this **[course](https://www.coursera.org/learn/c-plus-plus-a)** on coursera.org
