@@ -27,3 +27,12 @@ tag: notes
 |C-x C-f| Open a file|
 |C-x C-w| To save a buffer as a other file like *Save As* in other editors|
 |C-x C-b| To open ibuffer|
+|*Basic motion command*| |
+|C-f| Move forward one char|
+|C-b| Move backward one char|
+|C-p| Move previous one line|
+|C-n| Move next one line |
+|C-a| Move to the beginning of line|
+|C-e| Move to end of line|
+|M-f| Move forward one word|
+|M-b| Move backward one word|
