@@ -36,3 +36,7 @@ tag: notes
 |C-e| Move to end of line|
 |M-f| Move forward one word|
 |M-b| Move backward one word|
+|M-a| Move to the begining of a sentence|
+|M-e| Move to the end of a sentence|
+|M-<|Move to the top of buffer of a file|
+|M->|Move to the end of buffer of a file|
