@@ -40,3 +40,11 @@ tag: notes
 |M-e| Move to the end of a sentence|
 |M-S-<|Move to the top of buffer of a file|
 |M-S->|Move to the end of buffer of a file|
+||*Copy and paste*|
+|C-w|Kill a region like cut in common|
+|M-w|Copy a region like copy in common|
+|C-y|Yank to the regionlike pase in common|
+||*Undo and Redo*|
+|C-/| To undo|
+|C-x u| Also to undo|
+
