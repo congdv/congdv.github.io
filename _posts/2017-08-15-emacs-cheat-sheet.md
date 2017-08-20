@@ -48,3 +48,4 @@ tag: notes
 |C-/| To undo|
 |C-x u| Also to undo|
 ||*Configuration emacs**|
+|C-x C-e|Execute file configuration|
