@@ -47,4 +47,4 @@ tag: notes
 ||*Undo and Redo*|
 |C-/| To undo|
 |C-x u| Also to undo|
-
+||*Configuration emacs**|
