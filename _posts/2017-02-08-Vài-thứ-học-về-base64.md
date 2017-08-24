@@ -1,10 +1,11 @@
 ---
-layout: article 
-title: "Vài thứ học về base64"
-date: 2017-02-08
+layout: article
+title: Vài thứ học về base64
+date: 'Wed Feb 08 2017 07:00:00 GMT+0700 (ICT)'
 tag: blog
+published: true
 ---
-Dành 3 đêm để giải bài decode với encode của khóa c trên [mooc.fi](http://2016-aalto-c.tmchq.co/en/Module_5/index.html#desc-3-en)
+Dành 3 đêm để giải bài decode với encode của khóa c trên [mooc.fi](http://src.aalto.fi/c-en/home/index.html)
 
 ## Kiến thức về base 64
 - Được dùng để mã hóa và giải mã chuỗi. Ví dụ: Man -> TWFU , TWFU -> Man
