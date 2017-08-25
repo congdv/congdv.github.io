@@ -244,3 +244,23 @@ In sequential containers, we know what the first element , the third element, th
 
 Sets and map are called associative containers, associtate between key and content of it
 
+## 4.8 - C++ 11 Feature: auto
+
+```
+ for(auto it = v.begin(); it != v.end(); ++it)
+     cout << *it <<" ";  
+ 
+ auto d;
+ int a = 90;
+ d = a;// auto become integer type
+ double b =40.2;
+ d = b; // auto become double type
+```
+
+
+## 4.11 C++ 11 Feature: for statement 
+
+```
+for(declaration: expression) 
+	statement
+```
