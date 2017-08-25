@@ -213,7 +213,34 @@ class point {
 
 With operator overloading can be present another way like
 ```
+Point operator+(const Point p) {
+   return Point(this->x+p.x,this->y+p.y); // Weird This acces to private memeber of point
+}
+
+
 point a,b,c
 
 c = a + b; // b.operator+(c);
 ```
+
+> Other works because you define operator+ for type cor, in all methods of class cor ( public or private ) you are allowed to call private and public members. In this operator other variable is of the same type, so according to this rule you are allowed to call other.x. In main function you are out of this scope so it is reason why this will not work.
+
+> Another thing ( just for information ) is that you perform operation of + on two objects and as a result int is returned then implicit constructor is called
+
+[Resolve](https://stackoverflow.com/questions/31639340/accessing-private-member-variables-within-a-class-why-does-this-work)
+
+## 4.6 - STL and STL C++11
+
+Standard Template Library:
+
+Three Legged Stool:
+- Container: vector, list, map
+- Iterators: forward, backward,random access
+- Algorithms: sort, permute
+
+List and vector are called sequential containers.
+
+In sequential containers, we know what the first element , the third element, the nth element
+
+Sets and map are called associative containers, associtate between key and content of it
+
