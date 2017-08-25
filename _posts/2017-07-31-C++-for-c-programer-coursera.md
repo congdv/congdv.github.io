@@ -163,3 +163,27 @@ slist:~slit(){
 - doubly linked list have bidirectionally
 
 [Dijkstra's Algorithm](https://www.youtube.com/watch?v=GazC3A4OQTE&t=578s)
+
+# 4 - Minimum Spanning Tree & Standard Template Library
+## 4.5 - Overloading and function selection
+
+```
+// Point and conversions
+class point {
+	public:
+    point(double u): x(u),u(0){} // -> this is conversion constructor
+   	...
+    private:
+    double x,y;
+}
+
+// Convert double to point
+point s;
+double d;
+
+s = d; // implicit conversion
+s= static_cast<point> d; // explicit conversion
+
+// convert point to double
+
+```
