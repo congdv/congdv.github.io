@@ -185,5 +185,28 @@ s = d; // implicit conversion
 s= static_cast<point> d; // explicit conversion
 
 // convert point to double
+// Can't get definition of native type but C++ can do as follows:
+
+point::operator double() {
+	return sqrt(x*x + y*y);
+}
+
+d = s; //
+```
+
+**Friend Function**
+
+```
+ostream& operator<<(ostream &out, const point &p) {
+	out<<x<<y; // Fail because x,y are private variable
+}
+class point {
+	public:
+    point(double u): x(u),u(0){} // -> this is conversion constructor
+    friend ostream& operator<<(ostream &out, const point &p); // With friend function can get value x,y.
+   	...
+    private:
+    double x,y; // 
+}
 
 ```
