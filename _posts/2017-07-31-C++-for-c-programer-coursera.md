@@ -263,4 +263,9 @@ Sets and map are called associative containers, associtate between key and conte
 ```
 for(declaration: expression) 
 	statement
+
+for(double d: data) {
+	sum += d;
+}
+data is array of double
 ```
