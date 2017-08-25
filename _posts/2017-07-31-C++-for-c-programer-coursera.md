@@ -210,3 +210,10 @@ class point {
 }
 
 ```
+
+With operator overloading can be present another way like
+```
+point a,b,c
+
+c = a + b; // b.operator+(c);
+```
