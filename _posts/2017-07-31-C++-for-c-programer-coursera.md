@@ -116,6 +116,8 @@ point p1 = {2,3};
 
 [Random](https://stackoverflow.com/questions/14914595/what-is-a-seed-in-terms-of-generating-a-random-number)
 
+[Monte-Carlo method](https://quangchien.wordpress.com/2012/04/12/ch9a-computational-physics/)
+
 ## 3.2 Point and its Constructor
 
 ```
