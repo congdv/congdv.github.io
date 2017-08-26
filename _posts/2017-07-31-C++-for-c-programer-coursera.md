@@ -110,6 +110,12 @@ point p1 = {2,3};
 ```
 # Module 3 - C++ and OO; Lists
 
+> What is normally called a random number sequence in reality is a "pseudo-random" number sequence because the values are computed using a deterministic algorithm and probability plays no real role.
+
+> The "seed" is a starting point for the sequence and the guarantee is that if you start from the same seed you will get the same sequence of numbers. This is very useful for example for debugging (when you are looking for an error in a program you need to be able to reproduce the problem and study it, a non-deterministic program would be much harder to debug because every run would be different).
+
+[Random](https://stackoverflow.com/questions/14914595/what-is-a-seed-in-terms-of-generating-a-random-number)
+
 ## 3.2 Point and its Constructor
 
 ```
