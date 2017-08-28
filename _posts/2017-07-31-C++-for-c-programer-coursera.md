@@ -277,3 +277,10 @@ for(double d: data) {
 }
 data is array of double
 ```
+
+**Note**
+#define foo(a)(a * a)
+
+foo(1+2); = 5 foo(1) + foo(2);
+x = 1; 
+foo(x+1); = 3 foo(x) + foo(1);
