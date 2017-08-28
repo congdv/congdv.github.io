@@ -1,7 +1,7 @@
 ---
 date: '2017-08-28 15:43 +0700'
 layout: article
-published: false
+published: true
 title: Vim cheat sheet
 tag: notes
 ---
