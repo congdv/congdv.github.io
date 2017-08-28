@@ -281,6 +281,7 @@ data is array of double
 **Note**
 #define foo(a)(a * a)
 
-foo(1+2); = 5 foo(1) + foo(2);
+foo(1+2); = 1 + 2 * 1 + 2 = 5 // 2 * 1 will be evaluated first
+
 x = 1; 
 foo(x+1); = 3 foo(x) + foo(1);
