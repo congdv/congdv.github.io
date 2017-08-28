@@ -9,8 +9,9 @@ tag: notes
 
 [CTags](https://blog.sensible.io/2014/05/09/supercharge-your-vim-into-ide-with-ctags.html)
 [Leader Key](https://stackoverflow.com/questions/1764263/what-is-the-leader-in-a-vimrc-file)
-> The <Leader> key is mapped to \ by default. So if you have a map of <Leader>t, you can execute it by default with \+t. For more detail or re-assigning it using the mapleader variable, see
-  [internal-variables](https://stackoverflow.com/questions/15685729/vim-what-is-the-difference-between-let-g-let-b-etc)
+> The <Leader> key is mapped to \ by default. So if you have a map of <Leader>t, you can execute it by default with \+t.
+
+[internal-variables](https://stackoverflow.com/questions/15685729/vim-what-is-the-difference-between-let-g-let-b-etc)
 
 |Shortcut| Description           |
 |:-------:|:---------------------|
