@@ -279,9 +279,18 @@ data is array of double
 ```
 
 **Note**
-#define foo(a)(a * a)
+```
+#define foo(a)(a * a) 
 
 foo(1+2); = 1 + 2 * 1 + 2 = 5 // 2 * 1 will be evaluated first
 
+#define foo(a)((a) * (a))
+foo(1+2); = (1+2)*(1+2) = 9
+
 x = 1; 
 foo(x+1); = 3 foo(x) + foo(1);
+
+#define MULT(x, y) (x) * (y)
+// now MULT(3 + 2, 4 + 2) will expand to (3 + 2) * (4 + 2)
+```
+[Preprocessing](http://www.cprogramming.com/tutorial/cpreprocessor.html)
