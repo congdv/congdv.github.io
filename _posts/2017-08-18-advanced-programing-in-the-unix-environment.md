@@ -102,4 +102,8 @@ When measure the execution time of a process, we'll see that the UNIX System mai
  System calls like services is provided by kernel. This help user request command directly to kernel. The exact number of system calls depend on the OS version.
  Both system calls and library functions appear as normal C functions. 
  
+ The relationship between application, the malloc function, and the sbrk system call.
+ 
  ![Malloc and System call ](https://user-images.githubusercontent.com/8192210/29810126-dedde042-8cc8-11e7-8d89-108e952e9bea.png)
+ 
+ 
