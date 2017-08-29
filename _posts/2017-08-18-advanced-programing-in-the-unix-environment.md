@@ -106,4 +106,5 @@ When measure the execution time of a process, we'll see that the UNIX System mai
  
  ![Malloc and System call ](https://user-images.githubusercontent.com/8192210/29810126-dedde042-8cc8-11e7-8d89-108e952e9bea.png)
  
+ ![Library and System calls](https://user-images.githubusercontent.com/8192210/29810194-3706b186-8cc9-11e7-9e64-f89fca7b619c.png)
  
