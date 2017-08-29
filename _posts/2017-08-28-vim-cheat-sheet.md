@@ -7,7 +7,7 @@ tag: notes
 ---
 ## Vim
 
-[CTags](https://blog.sensible.io/2014/05/09/supercharge-your-vim-into-ide-with-ctags.html)
+[CTags](https://andrew.stwrt.ca/posts/vim-ctags/)
 [Leader Key](https://stackoverflow.com/questions/1764263/what-is-the-leader-in-a-vimrc-file)
 > The <Leader> key is mapped to \ by default. So if you have a map of <Leader>t, you can execute it by default with \+t.
 
