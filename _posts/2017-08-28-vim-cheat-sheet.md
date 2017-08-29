@@ -7,11 +7,12 @@ tag: notes
 ---
 ## Vim
 
-[CTags](https://andrew.stwrt.ca/posts/vim-ctags/)
-[Leader Key](https://stackoverflow.com/questions/1764263/what-is-the-leader-in-a-vimrc-file)
+### Concept note
+
+- [Leader Key](https://stackoverflow.com/questions/1764263/what-is-the-leader-in-a-vimrc-file)
 > The <Leader> key is mapped to \ by default. So if you have a map of <Leader>t, you can execute it by default with \+t.
 
-[internal-variables](https://stackoverflow.com/questions/15685729/vim-what-is-the-difference-between-let-g-let-b-etc)
+- [internal-variables](https://stackoverflow.com/questions/15685729/vim-what-is-the-difference-between-let-g-let-b-etc)
 
 |Shortcut| Description           |
 |:-------:|:---------------------|
@@ -22,3 +23,7 @@ tag: notes
 |:tp | Go to the previous definition for the last tag |
 |:ts | List all of the definitions of the last tag |
 |Ctrl-t|Jump back up in the tag stack|
+  
+## Plugin 
+- [CTags](https://andrew.stwrt.ca/posts/vim-ctags/): Plugin support browser file easy
+- [C Vim](http://www.thegeekstuff.com/2009/01/tutorial-make-vim-as-your-cc-ide-using-cvim-plugin/): Make like C/C++ IDE
