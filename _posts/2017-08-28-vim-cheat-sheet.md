@@ -14,6 +14,8 @@ tag: notes
 
 - [internal-variables](https://stackoverflow.com/questions/15685729/vim-what-is-the-difference-between-let-g-let-b-etc)
 
+- Run *fg* command to bring program back to the foreground. 
+
 |Shortcut| Description           |
 |:-------:|:---------------------|
 || *Ctags* |
