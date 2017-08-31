@@ -35,6 +35,8 @@ tag: notes
 |B| Back to previouse string word continues|
 |w| Go to next exactly a word|
 |W| Go to string word continues|
+|$| Go to end of currently line|
+|^| Go to start of currently line|
   
 ## Plugin 
 - [CTags](https://andrew.stwrt.ca/posts/vim-ctags/): Plugin support browser file easy
