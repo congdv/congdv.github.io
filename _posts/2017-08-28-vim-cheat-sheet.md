@@ -27,6 +27,14 @@ tag: notes
 |Ctrl-t|Jump back up in the tag stack|
 || *Show match ([{}])* |
 |%| To jump to a matching opening or closing parenthesis, square bracket or a curly brace: ([{}]) in normal mode|
+|| *Navigation*|
+|o| Enter newline|
+|e| Go to end exactly a word|
+|E| Go to end string word continues|
+|b| Back to previous exactly a word|
+|B| Back to previouse string word continues|
+|w| Go to next exactly a word|
+|W| Go to string word continues|
   
 ## Plugin 
 - [CTags](https://andrew.stwrt.ca/posts/vim-ctags/): Plugin support browser file easy
