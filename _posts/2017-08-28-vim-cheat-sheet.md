@@ -37,6 +37,12 @@ tag: notes
 |W| Go to string word continues|
 |$| Go to end of currently line|
 |^| Go to start of currently line|
+|| *Edit command*|
+|i| insert at current cursor|
+|a| Append at current cursor|
+|r + <char>| Replace at current cursor with character but still keep command mode|
+||*Command*|
+|Ctrl-g|show your location|
   
 ## Plugin 
 - [CTags](https://andrew.stwrt.ca/posts/vim-ctags/): Plugin support browser file easy
