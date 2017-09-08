@@ -43,6 +43,7 @@ tag: notes
 |r + <char>| Replace at current cursor with character but still keep command mode|
 ||*Command*|
 |Ctrl-g|show your location|
+|:tabe <filepath> | create new file in other tab|
   
 ## Plugin 
 - [CTags](https://andrew.stwrt.ca/posts/vim-ctags/): Plugin support browser file easy
