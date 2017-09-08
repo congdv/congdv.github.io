@@ -44,6 +44,8 @@ tag: notes
 ||*Command*|
 |Ctrl-g|show your location|
 |:tabe <filepath> | create new file in other tab|
+|:lnext | Go to next location of error when use YCM plugin|
+|:lpreviouse | Go to previous location of error when use YCM plugin|
   
 ## Plugin 
 - [CTags](https://andrew.stwrt.ca/posts/vim-ctags/): Plugin support browser file easy
