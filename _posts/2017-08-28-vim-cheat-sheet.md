@@ -47,5 +47,5 @@ tag: notes
   
 ## Plugin 
 - [CTags](https://andrew.stwrt.ca/posts/vim-ctags/): Plugin support browser file easy
-- [C Vim](http://www.thegeekstuff.com/2009/01/tutorial-make-vim-as-your-cc-ide-using-cvim-plugin/): Make like C/C++ IDE, [Key mapping](https://wolfgangmehner.github.io/vim-plugins/csupport/c-hotkeys.pdf)
+- ~~[C Vim](http://www.thegeekstuff.com/2009/01/tutorial-make-vim-as-your-cc-ide-using-cvim-plugin/): Make like C/C++ IDE, [Key mapping](https://wolfgangmehner.github.io/vim-plugins/csupport/c-hotkeys.pdf)~~ I removed it because it 's so slow when generate comment tag
 - [Auto Pairs](https://github.com/jiangmiao/auto-pairs): support closing parenttheis
