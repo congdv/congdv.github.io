@@ -12,3 +12,4 @@ tag: notes
 || *Working with remote repository* |
 |git remote add origin  [link]| Jump to the tag underneath the cursor|
 |git remote -v | verify new remote|
+|git config –global credential.helper “cache –timeout=3600" | Set time for login again |
