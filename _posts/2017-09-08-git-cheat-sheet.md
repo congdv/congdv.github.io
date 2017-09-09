@@ -11,3 +11,9 @@ tag: notes
 |git remote add origin  [link]| set a new remote|
 |git remote -v | verify new remote|
 |git config --global credential.helper "cache --timeout=3600| Set time login again|
+
+|Shortcut| Description           |
+|:-------:|:---------------------|
+|| *Ctags* |
+|Ctrl-]| Jump to the tag underneath the cursor|
+|:ts <tag> <RET>| Search for a particular tag |
