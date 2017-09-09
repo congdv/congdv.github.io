@@ -37,6 +37,8 @@ tag: notes
 |W| Go to string word continues|
 |$| Go to end of currently line|
 |^| Go to start of currently line|
+|Shift + ) or Shitf + }| Scroll down|
+|Shift + ( or Shift + {| scroll Up|
 || *Edit command*|
 |i| insert at current cursor|
 |a| Append at current cursor|
