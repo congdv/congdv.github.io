@@ -8,9 +8,6 @@ tag: notes
 ## Git Cheat Sheet
 |Shortcut| Description           |
 |:-------:|:---------------------|
-|| *Work with remote repository* |
 |git remote add origin  [link]| set a new remote|
 |git remote -v | verify new remote|
-|| * Config git *|
 |git config --global credential.helper "cache --timeout=3600| Set time login again|
-
