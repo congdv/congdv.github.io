@@ -10,4 +10,5 @@ permalink: /todos/ # ---> Path of the page
 - [ ] Chat application command line.[here](https://github.com/congdv/server-client-chat)
 - [ ] Get certificate from this **[course](https://www.coursera.org/learn/c-plus-plus-a)** on coursera.org
 - [ ] Teach yourself computer science .[here](http://teachyourselfcs.com/)
+- [ ] Tool support manipulate bit like shift bit..
 
