@@ -15,5 +15,5 @@ tag: notes
 |Shortcut| Description           |
 |:-------:|:---------------------|
 || *Ctags* |
-|Ctrl-]| Jump to the tag underneath the cursor|
+|git remote add origin  [link]| Jump to the tag underneath the cursor|
 |:ts <tag> <RET>| Search for a particular tag |
