@@ -6,6 +6,7 @@ title: Git Cheat Sheet
 tag: notes
 ---
 ## Git Cheat Sheet
+
 |Shortcut| Description           |
 |:-------:|:---------------------|
 || *Working with remote repository* |
