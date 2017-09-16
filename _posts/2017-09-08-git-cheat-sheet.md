@@ -13,3 +13,9 @@ tag: notes
 |git remote add origin  [link]| Jump to the tag underneath the cursor|
 |git remote -v | verify new remote|
 |git config –global credential.helper “cache –timeout=3600" | Set time for login again |
+
+### Git revert old commit
+```
+> git log
+> git checkout <commit>
+```
