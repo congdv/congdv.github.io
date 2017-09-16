@@ -8,3 +8,5 @@ tag: notes
 ## Valgrind
 
 Add  flag -g when compile source for valgrind can get line numbers of files.
+
+``finish`` go out a function
