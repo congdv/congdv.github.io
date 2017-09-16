@@ -18,4 +18,13 @@ tag: notes
 ```
 > git log
 > git checkout <commit>
+> git log master // To print out all log
+```
+
+### Branch
+```
+> git branch <name-branch>   
+> git checkout <name-branch>
+
+>> git branch -b <name-branch> // create branch and checkout
 ```
