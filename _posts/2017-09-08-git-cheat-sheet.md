@@ -28,3 +28,11 @@ tag: notes
 
 >> git branch -b <name-branch> // create branch and checkout
 ```
+
+### configuration
+```
+# set a username globally 
+> git config --global user.name "username"`
+# set an email address globally
+> git config --global user.email "email@provider.com"
+```
