@@ -29,7 +29,7 @@ tag: notes
 >> git branch -b <name-branch> // create branch and checkout
 ```
 
-### configuration
+### Configuration
 ```
 # set a username globally 
 > git config --global user.name "username"`
