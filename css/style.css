@@ -34,11 +34,11 @@ nav a {
         background-color:#007bff;
         color:#ffffff;
 }
-
+/*
 .nav-item a:focus {
         background-color:#007bff;
         color:#ffffff;
-}
+}*/
 #lienhe .modal-header {
     border-bottom:none;
 }
