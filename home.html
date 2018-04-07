@@ -9,7 +9,7 @@
             crossorigin="anonymous">
         <link rel="stylesheet" href="./css/style.css">
     </head>
-    <body>
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
             <nav class="navbar navbar-expand-sm fixed-top">
                 <div class="container">
                     <a class="navbar-brand" href="#"> Đại Nhân Group </a>
@@ -19,28 +19,28 @@
                     <div class="collapse navbar-collapse" id="navbarMenu">
                     <ul class="navbar-nav ml-auto nav-pills" >
                         <li class="nav-item">
-                            <a href="#gioithieu" class="nav-link active"> Giới Thiệu </a>
+                            <a href="#gioithieu" class="nav-link active scroll"> Giới Thiệu </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#vitri" class="nav-link"> Vị Trí </a>
+                            <a href="#vitri" class="nav-link scroll"> Vị Trí </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#tienich" class="nav-link"> Tiện Ích </a>
+                            <a href="#tienich" class="nav-link scroll"> Tiện Ích </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#matbang" class="nav-link"> Mặt Bằng </a>
+                            <a href="#matbang" class="nav-link scroll"> Mặt Bằng </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#thanhtoan" class="nav-link"> Thanh Toán </a>
+                            <a href="#thanhtoan" class="nav-link scroll"> Thanh Toán </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#hinhanh" class="nav-link"> Hình Ảnh </a>
+                            <a href="#hinhanh" class="nav-link scroll"> Hình Ảnh </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#tintuc" class="nav-link"> Tin Tức </a>
+                            <a href="#tintuc" class="nav-link scroll"> Tin Tức </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#lienhe" class="nav-link"> Liên Hệ </a>
+                            <a href="#lienhe" class="nav-link scroll"> Liên Hệ </a>
                         </li>
                     </ul>
                     </div>
@@ -72,7 +72,7 @@
             </div>
         </div>
         <!--VITRI SECTION-->
-        <section id="vitri" class="bg-primary">
+        <section id="vitri" class="bg-info">
             <div class="container">
                 <div class="row">
                     <div class="col text-center">
@@ -87,7 +87,7 @@
         </section>
 
         <!--TIENICH SECTION-->
-        <section id="tienich" >
+        <section id="tienich" class="border-bottom border-primary">
             <div class="container">
                 <div class="p-5">
                     <div class="row">
@@ -104,7 +104,7 @@
         </section>
 
         <!--MATBANG SECTION-->
-        <section id="matbang" >
+        <section id="matbang" class="border-bottom border-primary" >
             <div class="container">
                 <div class="p-5">
                     <div class="row">
@@ -121,7 +121,7 @@
         </section>
 
         <!--THANHTOAN SECTION-->
-        <section id="thanhtoan" >
+        <section id="thanhtoan" class="border-bottom border-primary">
             <div class="container">
                 <div class="p-5">
                     <div class="row">
@@ -138,7 +138,7 @@
         </section>
 
         <!--HINHANH SECTION-->
-        <section id="hinhanh" >
+        <section id="hinhanh" class="border-bottom border-primary">
             <div class="container">
                 <div class="p-5">
                     <div class="row">
@@ -155,7 +155,7 @@
         </section>
 
         <!--TINTUC SECTION-->
-        <section id="tintuc" >
+        <section id="tintuc" class="border-bottom border-primary">
             <div class="container">
                 <div class="p-5">
                     <div class="row">
@@ -171,7 +171,7 @@
             </div>
         </section>
         <!--LIENHE SECTION-->
-        <section id="lienhe" >
+        <section id="lienhe" class="border-bottom border-primary">
             <div class="container">
                 <div class="p-5">
                     <div class="row">
@@ -218,7 +218,7 @@
                         <div class="py-4">
                             <h1 class="h3 text-white"> Đại Nhân Group</h1>
                             <p class="text-white">Copyright &copy; 2018</p>
-                            <button class="btn btn-primary" data-toggle="modal" data-target="#contactModal"> Contact Us</button>
+                            <!--<button class="btn btn-primary" data-toggle="modal" data-target="#contactModal"> Contact Us</button>-->
                         </div>
                     </div>
                 </div>
@@ -257,7 +257,8 @@
         </div>
     <!-- jQuery library -->
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 
@@ -279,6 +280,7 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-BsTEXoyMSPb2GGhNl--NU1GprzW5EoI&callback=initMap">
     </script>
+    <script src="./js/script.js"></script>
 
     </body>
 
