@@ -15,6 +15,7 @@ tag: notes
 - [internal-variables](https://stackoverflow.com/questions/15685729/vim-what-is-the-difference-between-let-g-let-b-etc)
 
 - Run *fg* command to bring program back to the foreground. 
+- a word of caution: "w does not stand for write but for wipeout"
 
 |Shortcut| Description           |
 |:-------:|:---------------------|
@@ -48,6 +49,8 @@ tag: notes
 |:tabe <filepath> | create new file in other tab|
 |:lnext | Go to next location of error when use YCM plugin|
 |:lpreviouse | Go to previous location of error when use YCM plugin|
+|:bd | buffer delete but if it changed, you have to add ! last|
+|:bw | like delete and it really delete buffer|
   
 ## Plugin 
 - [CTags](https://andrew.stwrt.ca/posts/vim-ctags/): Plugin support browser file easy
