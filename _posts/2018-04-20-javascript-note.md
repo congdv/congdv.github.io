@@ -1,7 +1,7 @@
 ---
 date: '2018-04-20 15:41 +0700'
 layout: article
-published: false
+published: true
 title: JavaScript Note
 tag: notes
 ---
