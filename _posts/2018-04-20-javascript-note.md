@@ -22,9 +22,11 @@ let name = "An"
 console.log(`Hello ${An}`);
 ```
 
-** Comments
+** Comments**
 Like comments on C/C++, 
 // and /* */
+
+** Use === to check equal a string **
 
 ## Function
 **normal function and expression function**
