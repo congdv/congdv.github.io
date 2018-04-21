@@ -45,3 +45,11 @@ Also, you can make expression like inline function
 ```
 const exVal = parameter => parameter * 10;
 ```
+
+## Array
+Initalize an array
+
+```
+let array = ["This","is","String"];
+```
+list items in array like other language
