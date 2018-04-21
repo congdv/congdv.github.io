@@ -53,3 +53,11 @@ Initalize an array
 let array = ["This","is","String"];
 ```
 list items in array like other language
+
+## [Iterators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Iteration_methods)
+Iterators is used when a task occurs frequently.
+
+The value return is an array.
+- forEach() // to list element
+- map() // for change value of array
+- filter() // filter
