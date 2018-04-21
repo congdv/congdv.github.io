@@ -26,7 +26,7 @@ console.log(`Hello ${An}`);
 Like comments on C/C++, 
 // and /* */
 
-** Use === to check equal a string **
+** Use === to compare **
 
 ## Function
 **normal function and expression function**
