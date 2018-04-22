@@ -61,6 +61,7 @@ The value return is an array.
 - forEach() // to list element
 - map() // for change value of array
 - filter() // filter
+
 ## Object
 Use a variable to store a data by key and value
 ```
