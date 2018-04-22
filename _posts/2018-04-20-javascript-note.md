@@ -61,3 +61,47 @@ The value return is an array.
 - forEach() // to list element
 - map() // for change value of array
 - filter() // filter
+## Object
+Use a variable to store a data by key and value
+```
+let person = {
+age:20,
+name: "congdv"
+};
+// Access the avalue
+console.log(person.age)
+console.log(person[name])
+// add new key into object
+person['hobbies'] = ['reading','cycling'];
+```
+Inside the object we can write a function in a object
+```
+let person = {
+sayHello: () =>{
+	return "Hello";
+},
+sayGoodbye(){
+	return "Goodbye";
+}
+```
+If the function use any key in object, just add keyword `this.key`
+
+Setter and getter in Object
+```
+let person = {
+	age: 20;
+    set changeAge(ageValue){
+    	if(typeof ageValue == 'number'){
+        	this.age = ageValue;
+        }
+    }
+    get getAge(){
+    	return this.age;
+    }
+}
+// Assign value
+person.changeAge = 90;
+```
+Objects store key-value pairs and represent the real-world things in Javascript.
+
+`this` helps us with scope inside of object methods
