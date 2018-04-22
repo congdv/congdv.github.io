@@ -63,6 +63,7 @@ The value return is an array.
 - filter() // filter
 
 ## Object
+
 Use a variable to store a data by key and value
 ```
 let person = {
