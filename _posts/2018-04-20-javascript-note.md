@@ -158,3 +158,10 @@ console.log(nurseOlynyk.remainingVacationDays);
 nurseOlynyk.addCertification('Genetics');
 console.log(nurseOlynyk.certifications);
 ```
+## Javascript and browser
+
+Almost browser support Javascript ES5(EcmacScript 5), The newest version JS is ES6.
+The different between ES5 and ES6 is OOP, from ES6, JS have OOP. That is why many framework and library are born to speed up coding in JS.
+So, because advantage points of ES6, The tool to convert from ES6 to ES5 is used, that is babel.
+So, We need a program to manage all package and library and npm is built to solve that problem.
+Wellcom npm to the hell world.
