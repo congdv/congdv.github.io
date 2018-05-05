@@ -58,5 +58,3 @@ http://eloquentjavascript.net/13_browser.html
 However, when you send data to server and server send back to you, you don't want to anybody see that data because the data is not encrypt when you use HTTP protocol. That is why HTTPS is developed.
 
 ## HTTPS
-
-
