@@ -168,5 +168,12 @@ So, because advantage points of ES6, The tool to convert from ES6 to ES5 is used
 
 So, We need a program to manage all package and library and npm is built to solve that problem.
 
-Wellcom npm to the hell world.
+Wellcome npm to the hell world.
 
+## Modules
+Javascript modules is reuseable pieces of code that can be exported from one program and imported for use in another program.
+
+Convert a object to a modules:
+```
+module.exports = object_name;
+```
