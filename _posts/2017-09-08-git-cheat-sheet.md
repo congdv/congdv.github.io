@@ -36,3 +36,7 @@ tag: notes
 # set an email address globally
 > git config --global user.email "email@provider.com"
 ```
+### Credentials
+```
+git config --global credential.helper 'cache --timeout=3600'
+```
