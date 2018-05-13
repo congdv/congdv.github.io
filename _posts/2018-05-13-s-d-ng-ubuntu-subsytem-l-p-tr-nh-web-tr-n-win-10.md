@@ -12,11 +12,11 @@ Mình dùng Terminal và vim trên Ubuntu để code, còn browser trên win 10 
 ## Chạy server trên ubuntu subsystem
 - Chạy một local server tại thư mục chứa file index.html trên Ubuntu.
 ```
-> python -m SimpleHTTPServer
+> python -m SimpleHTTPServer &
 ```
 Lúc này sẽ có một server được mở trên Ubuntu và port mặc định là 8000, có thể tùy chọn thay đổi port bằng:
 ```
-> python -m SimpleHTTPServer 3333
+> python -m SimpleHTTPServer 3333 &
 ```
 Có thể tham khảo tại [đậy](https://gist.github.com/funzoneq/737cd5316e525c388d51877fb7f542de) để chạy server như một service
 - Tuy nhiên để có thể chạy file html trên Ubuntu ta phải biết địa chỉ IP của ubuntu.
