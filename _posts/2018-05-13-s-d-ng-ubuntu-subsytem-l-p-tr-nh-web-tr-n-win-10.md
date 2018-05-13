@@ -1,8 +1,9 @@
 ---
 date: '2018-05-13 17:12 +0700'
 layout: article
-published: false
+published: true
 title: Sử dụng ubuntu subsytem để lập trình web trên win 10
+tag: blog
 ---
 Mình dùng Terminal và vim trên Ubuntu để code, còn browser trên win 10 để chạy file html.
 
@@ -17,6 +18,7 @@ Lúc này sẽ có một server được mở trên Ubuntu và port mặc địn
 ```
 > python -m SimpleHTTPServer 3333
 ```
+Có thể tham khảo tại [đậy](https://gist.github.com/funzoneq/737cd5316e525c388d51877fb7f542de) để chạy server như một service
 - Tuy nhiên để có thể chạy file html trên Ubuntu ta phải biết địa chỉ IP của ubuntu.
 ```
 > ifconfig 
