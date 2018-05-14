@@ -51,6 +51,8 @@ tag: notes
 |:lpreviouse | Go to previous location of error when use YCM plugin|
 |:bd | buffer delete but if it changed, you have to add ! last|
 |:bw | like delete and it really delete buffer|
+|:ls| list all buffers|
+|:b <number>| select buffers on list to display|
   
 ## Plugin 
 - [CTags](https://andrew.stwrt.ca/posts/vim-ctags/): Plugin support browser file easy
