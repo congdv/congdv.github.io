@@ -53,6 +53,7 @@ tag: notes
 |:bw | like delete and it really delete buffer|
 |:ls| list all buffers|
 |:b <number>| select buffers on list to display|
+|Ctrl + y ,| Implement emmet command|
   
 ## Plugin 
 - [CTags](https://andrew.stwrt.ca/posts/vim-ctags/): Plugin support browser file easy
