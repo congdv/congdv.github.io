@@ -58,6 +58,7 @@ tag: notes
 ||*NERDTree*|
 |t|Open file in new tab|
 |C|Change tree root to selected dir|
+|o| Open and close brances|
   
 ## Plugin 
 - [CTags](https://andrew.stwrt.ca/posts/vim-ctags/): Plugin support browser file easy
