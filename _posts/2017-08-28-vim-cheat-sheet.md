@@ -44,23 +44,33 @@ r + <char>     Replace at current cursor with character but still keep command m
 ```
 
 # CtrP #
+```
 Ctrl + y ,    Implement emmet command in emmet plugin
 cs x y        Change tag of a sentence replace x by y 
+```
+
 # NERDTree #
+```
 t             Open file in new tab
 C             Change tree root to selected dir
 o             Open and close brances
+```
+
 # CtrP #
+```
 <C-f> , <C-b> Cycle between modes
 <C-d>         Switch to filename search instead of full path
+```
 
 # Ctags #
+```
 Ctrl-]        Jump to the tag underneath the cursor
 :ts <tag> <RET> Search for a particular tag
 :tn           Go to the next definition for the last tag
 :tp           Go to the previous definition for the last tag
 :ts           List all of the definitions of the last tag
 Ctrl-t        Jump back up in the tag stack
+```
   
 ## Plugin 
 - [CTags](https://andrew.stwrt.ca/posts/vim-ctags/): Plugin support browser file easy
