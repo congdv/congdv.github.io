@@ -59,6 +59,9 @@ tag: notes
 |t|Open file in new tab|
 |C|Change tree root to selected dir|
 |o| Open and close brances|
+||*CtrP*|
+|<C-f> and <C-b>| cycle between modes|
+|<C-d>|switch to filename search instead of full path|
   
 ## Plugin 
 - [CTags](https://andrew.stwrt.ca/posts/vim-ctags/): Plugin support browser file easy
