@@ -179,7 +179,7 @@ table tr:nth-last-child(1) td{
  */
 
 .container{
-    max-width: 700px;
+    max-width: 940px;
     height: auto;
     margin: 0 auto;
     padding: 20px;
