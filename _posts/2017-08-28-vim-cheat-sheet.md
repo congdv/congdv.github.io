@@ -55,6 +55,9 @@ tag: notes
 |:b <number>| select buffers on list to display|
 |Ctrl + y ,| Implement emmet command in emmet plugin|
 |cs x y | Change tag of a sentence replace x by y |
+||*NERDTree*|
+|t|Open file in new tab|
+|C|Change tree root to selected dir|
   
 ## Plugin 
 - [CTags](https://andrew.stwrt.ca/posts/vim-ctags/): Plugin support browser file easy
