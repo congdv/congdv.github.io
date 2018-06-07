@@ -19,7 +19,8 @@ tag: notes
 
 # General #
 ```
-%              To jump to a matching opening or closing parenthesis, square bracket or a curly brace: ([{}]) in normal mode
+%              To jump to a matching opening or closing parenthesis, 
+			   square bracket or a curly brace: ([{}]) in normal mode
 o              Enter newline
 e              Go to end exactly a word
 E              Go to end string word continues
