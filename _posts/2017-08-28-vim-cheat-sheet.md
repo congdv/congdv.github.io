@@ -44,10 +44,11 @@ r + <char>     Replace at current cursor with character but still keep command m
 :b <number>   Select buffers on list to display
 ```
 
-# CtrP #
+# Emmet #
 ```
 Ctrl + y ,    Implement emmet command in emmet plugin
 cs x y        Change tag of a sentence replace x by y 
+html:5        Type Ctrl + y and , for generating html5 template
 ```
 
 # NERDTree #
