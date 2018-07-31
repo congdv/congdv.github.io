@@ -47,8 +47,8 @@ r + <char>     Replace at current cursor with character but still keep command m
 # Marks #
 ```
 ma            set mark a at current cursor location
-'a 	          jump to line of mark a (first non-blank character in line)
-`a 	          jump to position (line and column) of mark a
+'a            jump to line of mark a (first non-blank character in line)
+`a            jump to position (line and column) of mark a
 d'a 	      delete from current line to line of mark a
 d`a 	      delete from current cursor position to position of mark a
 c'a 	      change text from current line to line of mark a
