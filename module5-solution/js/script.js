@@ -18,7 +18,7 @@
 		responseContentText = substitutePropertyValue(responseContentText,'randomCategoryShortName',specialItem);
 		document.querySelector("#main-content").innerHTML = responseContentText;
 		// Change property for special button in navigaiton
-		document.documentElement.innerHTML = substitutePropertyValue(document.documentElement.innerHTML,'randomCategoryShortName',specialItem);
+		// document.documentElement.innerHTML = substitutePropertyValue(document.documentElement.innerHTML,'randomCategoryShortName',specialItem);
 	}, false);
 
 	dc.loadMenu = function(){
