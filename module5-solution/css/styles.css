@@ -1,0 +1,87 @@
+body {
+	font-size: 16px;
+}
+
+/* HEADER */
+
+
+#nav-list li a {
+	color: red;
+}
+
+#nav-list li a:hover{
+		background-color: #009999;
+}
+/* END HEADER */
+
+
+/* HOME PAGE */
+#main-content {
+	margin-top: 50px;
+}
+
+#menu-tile, #specials-tile, #map-tile {
+	height: 250px;
+	width: 100%;
+	margin-bottom: 15px;
+	position: relative;
+	border: 2px solid #009999;
+}
+#menu-tile {
+	background: url('../images/fast-food.png') no-repeat;
+	background-position: center;
+}
+
+#specials-tile {
+	background: url('../images/fork.png') no-repeat;
+	background-position: center;
+}
+
+#map-tile {
+	background: url('../images/planet-earth.png') no-repeat;
+	background-position: center;
+}
+#menu-tile span, #specials-tile span, #map-tile span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  opacity: .8;
+}
+/* END HOME PAGE*/
+
+/* MENU PAGE*/
+#main-content .menu-item{
+	background-color: #888;
+	padding: 0 20px 20px;
+}
+.menu-item h3 {
+	color: #D5DCC1;
+	padding-top: 20px;
+}
+/* END MENU PAGE*/
+
+/* ITEM SPECIAL */
+#menu-item-special .menu-item {
+	width: 40%;
+	margin: 0 auto;
+}
+/* END ITEM SPECIAL*/
+
+/********** Extra small devices only **********/
+
+@media (max-width: 767px){
+	/*Header*/
+	#nav-list li a {
+		text-align: center;
+		color: red;
+	}
+
+	
+	/*End Header*/
+}
