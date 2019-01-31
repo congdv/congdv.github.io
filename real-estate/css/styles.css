@@ -1,0 +1,362 @@
+
+/* Global */
+body {
+	background-color: #eaf3ef;
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
+}
+
+header {
+	min-height: 72px;
+}
+
+#main-content {
+	min-height: 300px;
+}
+
+/* End Global */
+
+/* Header */
+.navbar-default {
+	background-color: #ffffff;
+	padding: 10px;
+}
+.navbar-default .navbar-brand {
+	color:#007bff;
+	font-size: 2em;
+}
+#nav-items {
+	margin-top: 5px;
+}
+
+#nav-items li {
+	margin: 0 5px;
+}
+#nav-items a {
+	color:#007bff;
+	padding: 10px 15px;
+	font-size: 1.2em;
+	text-transform: uppercase;
+}
+#nav-items .active {
+	background-color: #007bff;
+	color:#ffffff;
+	border-radius: 5px;
+}
+#nav-items a:hover, #nav-items a:focus {
+	background-color: #007bff;
+	color:#ffffff;
+	border-radius: 5px;
+}
+/* End Header */
+
+/* Footer */
+footer.panel-footer {
+	background-color: #343a40;
+	color: #ffffff;
+	padding: 25px 0;
+	font-size: 1.2em;
+}
+.panel-footer .design-credit {
+	font-family: "PT Sans",sans-serif;
+	text-align: center;
+}
+.design-credit > a{
+	text-decoration: none;
+	color: #007bff;
+}
+
+/* End Footer*/
+
+/* Home Page*/
+
+
+.jumbotron {
+	background: url('../images/jumbotron.jpg') no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 100vh;
+	margin-bottom: 0;/*Reset property from bootstrap*/
+}
+
+#introduce-tile , #contact-tiles {
+	background-color: #007bff;
+	color:#ffffff;
+	padding: 20px 0 40px;
+}
+#introduce-tile p {
+	font-size: 1.2em;
+}
+#project-tiles {
+	background-color: #ffffff;
+	text-align: center;
+	color:#007bff;
+	padding-bottom: 40px;
+}
+#project-tiles h2 {
+	padding-bottom: 40px;
+}
+#project-tiles a.more {
+	text-decoration: none;
+	padding: 10px 20px;
+	font-size: 1.2em; 
+	border-radius: 5px;
+	color: #fff;
+}
+
+.project-image-1 {
+	background:url('../images/001/001.jpg') no-repeat;
+	background-position: center;
+}
+.project-image-2{
+	background:url('../images/002/002.jpg') no-repeat;
+	background-position: center;
+}
+.project-image-3{
+	background:url('../images/003/003.jpg') no-repeat;
+	background-position: center;
+}
+#project-tile {
+	height: 250px;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 30px;
+	background-position: center;
+}
+
+
+#project-tile .project-desc{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 30%;
+	text-align: left;
+	font-size: 1em;
+	text-transform: uppercase;
+	background: linear-gradient(to bottom, transparent, black);
+	/*When hover the background will transition*/
+	transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+	color: #FFF;
+	font-weight: bold;
+}
+#project-tile .project-desc .title{
+	position: absolute;
+	bottom: 10px;
+	left: : 0px;
+	margin-left: 20px;
+}
+
+#project-tile .project-desc .desc {
+	position: absolute;
+	bottom: -100px;
+	font-size: 1em;
+	text-transform: capitalize;
+	line-height: 1.2em;
+}
+#project-tile:hover .project-desc{
+	height: 100%;
+}
+#project-tile:hover .project-desc .title{
+	bottom: 30%;
+
+	margin-left: 20px;
+}
+#project-tile:hover .project-desc .desc{
+	bottom: 5%;
+	margin: 0 20px;
+}
+
+#contact-tiles h2 {
+	margin-bottom: 40px;
+}
+#address {
+	/*text-align: center;*/
+}
+#address div > b {
+	padding-right: 15px;
+}
+#address span{
+	font-size: 1.3em;
+}
+#address a {
+	text-decoration: none;
+	color:#fff;
+}
+#address p {
+	font-size: 1.8em;
+	line-height: 1.8;
+}
+ul.social-media-icons {
+	padding: 0;
+}
+
+.social-media-icons li{
+	list-style: none;
+	display: inline-block;
+}
+.social-media-icons li img{
+	height: 50px;
+	width: 50px;
+}
+/* End Home Page*/
+
+
+/* Du An Page */
+.breadcrumb {
+	/*background-color: #ffffff;*/
+	height: 40px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.breadcrumb .active {
+	background-color: #007bff;
+	border-radius: 5px;
+	color: #ffffff;
+}
+.breadcrumb a {
+	text-decoration: none;
+	padding: 5px 10px;
+}
+
+.breadcrumb a:hover, .breadcrumb a:focus {
+	background-color: #007bff;
+	border-radius: 5px;
+	color: #fff;
+}
+
+.thumbnail h3, .thumbnail p {
+	margin:10px 20px;
+
+}
+.thumbnail:hover {
+	text-decoration: none;
+}
+/* End Du An Page*/
+
+/* Item Detail Page*/
+#item-detail {
+	margin-bottom: 30px;
+}
+#item-detail p {
+	font-size: 1.3em;
+	line-height: 1.6em;
+}
+
+.slick-slider > button.slick-prev:before {
+    color:#000;
+    content: "\f104";
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: 900;
+    text-decoration: inherit;
+}
+
+.slick-slider .slick-prev {
+	z-index: 1;
+	bottom: 0%;
+	left: 0px;
+	background-color: #fff;
+}
+
+.slick-slider > button.slick-next:before {
+    color:#000;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: 900;
+    text-decoration: inherit;
+}
+.slick-slider .slick-next {
+	right: 0;
+	z-index: 1;
+	bottom: 0%;
+	background-color: #fff;
+}
+.slick-slider >button:hover {
+	background: #0066b3;
+}
+
+#side-bar ul {
+	padding: 0;
+}
+#side-bar li {
+	list-style: none;
+	padding: 10px 0;
+	border-bottom: 1px solid #4c4c4c;
+	color:#4c4c4c;
+	transition: all .3s;
+}
+#side-bar li.active{
+	border-color:  #007bff;
+	border-width: 5px;
+	color:#007bff;
+}
+
+#side-bar .active a {
+	color:#007bff;
+}
+
+#side-bar li a{
+	font-size: 1.6em;
+	padding: 10px 0 ;
+	color:#4c4c4c;
+	
+}
+
+#side-bar li a:hover, #side-bar li a:focus{
+	text-decoration: none;
+}
+
+#side-bar li:hover a{
+	color:#007bff;
+}
+#side-bar li:hover {
+	border-color: #007bff;
+	transition: all .3s;
+	border-width: 5px; 
+}
+
+.slide-for .item img, .slide-nav .item img {
+	width: 100%;
+	height: auto;
+}
+#side-bar {
+	padding-left: 0;
+}
+
+/* End Item Detail Page*/
+
+/***** Large devices only *****/
+@media (min-width: 1200px){
+	.breadcrumb{
+		width: 1170px;
+	}
+}
+
+/***** Medium devices only *****/
+@media (min-width: 992px) and (max-width: 1199px) {
+	.breadcrumb{
+		width: 970px;
+	}
+}
+/***** Small devices only ******/
+@media (min-width: 768px) and (max-width: 991px){
+	.breadcrumb {
+		width: 750px;
+	}
+}
+
+/***** Extra small devices only *****/
+@media (max-width: 767px){
+	#project-tiles .navbar-nav li {
+		float: left;
+	}
+	#map {
+		margin-top: 30px;
+	}
+
+
+}
