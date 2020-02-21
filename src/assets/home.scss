@@ -1,0 +1,49 @@
+.home {
+  
+  span {
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    color: #000000;
+  }
+
+  a {
+    color: $primaryColor;
+    &:hover,
+    &:focus {
+      color: black;
+      text-decoration: none;
+    }
+  }
+  .tags {
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 400;
+    margin-top: 70px;
+    li {
+      list-style: none;
+      display: inline;
+      padding: 2px 5px;
+
+      a {
+        color: #000000;
+        padding: 2px 5px;
+        &:hover,
+        &:focus {
+          color: $primaryColor;
+          text-decoration: none;
+          cursor: pointer;
+        } 
+      }
+      .active {
+        background-color: $primaryColor;
+        color: #ffffff;
+        
+        border-radius: 1px;
+        &:hover {
+          color: #ffffff;
+        }
+      }
+      
+    }
+  }
+}
