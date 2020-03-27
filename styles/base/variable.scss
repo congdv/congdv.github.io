@@ -1,0 +1,33 @@
+/**
+ Containers
+*/
+
+$x-small: 600px;
+$small: 800px;
+$medium: 960px;
+$large: 1200px;
+
+/**
+Font
+**/
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Serif");
+$font-family: "IBM Plex Serif", serif;
+
+/* Colors */
+$background: linear-gradient(to top, #f9fafb 0%, #ffffff 100%);
+$background-color: #f9fafb;
+$primary-color: #5d6063;
+$light-primary-color: #c4c8cc;
+$hover-color: #2c2f31;
+
+/* Heading */
+$heading-font-weight: 600;
+
+// Heading font size
+$h1: 2.5rem;
+$h2: 2.2rem;
+$h3: 1.85rem;
+$h4: 1.7rem;
+$h5: 1.4rem;
+$h6: 1.2rem;
+$h7: 1rem;
