@@ -164,6 +164,7 @@ body {
 /* About me Card */
 .about-me-card {
   display: none;
+  padding: 10px;
 }
 
 .about-me-card .description {
