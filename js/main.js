@@ -1,3 +1,7 @@
+/* Card Identifier */
+const projectCard = document.getElementById("project-card-id");
+const aboutMeCard = document.getElementById("about-me-card-id");
+
 /* Primary Card Animation*/
 
 function fadeInPrimaryCard(className) {
@@ -7,100 +11,72 @@ function fadeInPrimaryCard(className) {
 
 fadeInPrimaryCard(".primary-card");
 
-/** Animate */
-var isSlidingOut = true;
-var isSlidingIn = false;
-var isSlide = true;
-
-var previousSection = "";
-
 function onClickSlideOut(section) {
-	console.log(section);
+	isSlidingIn = true;
+	isSlidingOut = false;
 	anime({
 		targets: ".primary-card",
 		translateX: [0, -340],
 		duration: 1000,
 		delay: 100,
-		//easing: "easeInOutSine"
 		begin: function onBegin() {
-			displayComponent("secondary-card");
 			switch (section) {
 				case "projects":
-					displayComponent("project-card");
+					// fadeOutCard(projectCard);
+					displayCard(projectCard);
 					break;
 				case "about-me":
-					displayComponent("about-me-card");
+					// fadeOutCard(aboutMeCard);
+					displayCard(aboutMeCard);
 					break;
 				default:
 					break;
 			}
-		},
-		complete: function onComplete() {
-			isSlidingIn = true;
-			isSlidingOut = false;
 		}
 	});
 }
 
-function onClickSlideIn(section) {
+function onClickSlideIn() {
+	isSlidingIn = false;
+	isSlidingOut = true;
+	previousSection = "";
+	isSlide = true;
+
 	anime({
 		targets: ".primary-card",
 		translateX: [-340, 0],
 		duration: 1000,
 		delay: 100,
 		begin: function onBegin() {
-			hideComponent("secondary-card");
-			switch (section) {
-				case "projects":
-					hideComponent("project-card");
-					break;
-				case "about-me":
-					hideComponent("about-me-card");
-					break;
-				default:
-					break;
-			}
-		},
-		complete: function onComplete() {
-			isSlidingIn = false;
-			isSlidingOut = true;
-			previousSection = "";
-			isSlide = true;
+			hideCard(projectCard);
+			hideCard(aboutMeCard);
 		}
 	});
 }
 
-/* Display components */
-function displayComponent(className) {
-	console.log(className);
-	var components = document.querySelectorAll(
-		"[class=" + CSS.escape(className) + "]"
-	);
-	components.forEach(component => {
-		if (component != null) {
-			component.style.display = "block";
-			console.log("display " + className);
-		} else {
-			console.log("Not find " + className);
-		}
-	});
+/* Display Card */
+function displayCard(card) {
+	card.classList.remove("hidden");
+	card.classList.add("show");
 }
 
-/* Hide components */
-function hideComponent(className) {
-	console.log(className);
-	var components = document.querySelectorAll(
-		"[class=" + CSS.escape(className) + "]"
-	);
-	components.forEach(component => {
-		if (component != null) {
-			component.style.display = "none";
-			console.log("Hide " + className);
-		} else {
-			console.log("Not find " + className);
-		}
-	});
+/* Fade out card */
+function fadeOutCard(card) {
+	card.classList.add("fade-out-card");
 }
+
+/* Hide Card */
+function hideCard(card) {
+	card.classList.remove("show");
+	card.classList.add("hidden");
+}
+
+/** Animate */
+var isSlidingOut = true;
+var isSlidingIn = false;
+var isSlide = true;
+
+var previousSection = "";
 
 function handleOnClick(section) {
 	// If click on the same previous section, isSlide will be true
@@ -110,37 +86,23 @@ function handleOnClick(section) {
 		isSlide = false;
 	}
 
-	switch (section) {
-		case "projects":
-			if (isSlidingOut && isSlide) {
-				onClickSlideOut(section);
-				isSlidingOut = false;
-				isSlidingIn = true;
-			} else if (isSlidingIn && isSlide) {
-				onClickSlideIn(section);
-				isSlidingIn = false;
-				isSlidingOut = true;
-			} else {
-				displayComponent("project-card");
-				hideComponent("about-me-card");
-			}
-			break;
-		case "about-me":
-			if (isSlidingOut && isSlide) {
-				onClickSlideOut(section);
-				isSlidingOut = false;
-				isSlidingIn = true;
-			} else if (isSlidingIn && isSlide) {
-				onClickSlideIn(section);
-				isSlidingIn = false;
-				isSlidingOut = true;
-			} else {
-				displayComponent("about-me-card");
-				hideComponent("project-card");
-			}
-			break;
-		default:
-			break;
+	if (isSlidingOut) {
+		onClickSlideOut(section);
+	} else if (isSlidingIn && isSlide) {
+		onClickSlideIn();
+	} else if (isSlidingIn && !isSlide) {
+		switch (section) {
+			case "projects":
+				displayCard(projectCard);
+				hideCard(aboutMeCard);
+				break;
+			case "about-me":
+				displayCard(aboutMeCard);
+				hideCard(projectCard);
+				break;
+			default:
+				break;
+		}
 	}
 	previousSection = section;
 }
