@@ -1,39 +1,61 @@
 /* Card Identifier */
+const primaryCard = document.querySelector(".primary-card");
 const projectCard = document.getElementById("project-card-id");
 const aboutMeCard = document.getElementById("about-me-card-id");
+const closeButtons = document.querySelectorAll(".btn-close");
 
 /* Primary Card Animation*/
 
-function fadeInPrimaryCard(className) {
-	const primaryCard = document.querySelector(".primary-card");
-	primaryCard.classList.add("animated", "fadeIn");
-}
-
-fadeInPrimaryCard(".primary-card");
+primaryCard.classList.add("animated", "fadeIn");
+projectCard.classList.add("animated", "fadeIn");
+aboutMeCard.classList.add("animated", "fadeIn");
 
 function onClickSlideOut(section) {
 	isSlidingIn = true;
 	isSlidingOut = false;
-	anime({
-		targets: ".primary-card",
-		translateX: [0, -340],
-		duration: 1000,
-		delay: 100,
-		begin: function onBegin() {
-			switch (section) {
-				case "projects":
-					// fadeOutCard(projectCard);
-					displayCard(projectCard);
-					break;
-				case "about-me":
-					// fadeOutCard(aboutMeCard);
-					displayCard(aboutMeCard);
-					break;
-				default:
-					break;
+
+	//Check screen size
+	const width = Math.max(
+		document.documentElement.clientWidth,
+		window.innerWidth || 0
+	);
+	if (width > 700) {
+		anime({
+			targets: ".primary-card",
+			translateX: [0, -340],
+			duration: 1000,
+			delay: 100,
+			begin: function onBegin() {
+				switch (section) {
+					case "projects":
+						// fadeOutCard(projectCard);
+						displayCard(projectCard);
+						break;
+					case "about-me":
+						// fadeOutCard(aboutMeCard);
+						displayCard(aboutMeCard);
+						break;
+					default:
+						break;
+				}
 			}
+		});
+	} else {
+		// hideCard(primaryCard);
+		resetPrimaryCardAndShow();
+		switch (section) {
+			case "projects":
+				// fadeOutCard(projectCard);
+				displayCard(projectCard);
+				break;
+			case "about-me":
+				// fadeOutCard(aboutMeCard);
+				displayCard(aboutMeCard);
+				break;
+			default:
+				break;
 		}
-	});
+	}
 }
 
 function onClickSlideIn() {
@@ -41,17 +63,28 @@ function onClickSlideIn() {
 	isSlidingOut = true;
 	previousSection = "";
 	isSlide = true;
-
-	anime({
-		targets: ".primary-card",
-		translateX: [-340, 0],
-		duration: 1000,
-		delay: 100,
-		begin: function onBegin() {
-			hideCard(projectCard);
-			hideCard(aboutMeCard);
-		}
-	});
+	//Check screen size
+	const width = Math.max(
+		document.documentElement.clientWidth,
+		window.innerWidth || 0
+	);
+	if (width > 700) {
+		anime({
+			targets: ".primary-card",
+			translateX: [-340, 0],
+			duration: 1000,
+			delay: 100,
+			begin: function onBegin() {
+				hideCard(projectCard);
+				hideCard(aboutMeCard);
+			}
+		});
+	} else {
+		hideCard(projectCard);
+		hideCard(aboutMeCard);
+		// displayCard(primaryCard);
+		resetPrimaryCardAndNoShow();
+	}
 }
 
 /* Display Card */
@@ -71,6 +104,15 @@ function hideCard(card) {
 	card.classList.add("hidden");
 }
 
+/* Reset primary card */
+function resetPrimaryCardAndShow() {
+	primaryCard.classList.add("show");
+	//primaryCard.remove("primary-card");
+}
+function resetPrimaryCardAndNoShow() {
+	primaryCard.classList.remove("show");
+	//primaryCard.remove("primary-card");
+}
 /** Animate */
 var isSlidingOut = true;
 var isSlidingIn = false;
@@ -106,3 +148,11 @@ function handleOnClick(section) {
 	}
 	previousSection = section;
 }
+
+// Handle close click
+
+closeButtons.forEach(function(button) {
+	button.addEventListener("click", function() {
+		onClickSlideIn();
+	});
+});

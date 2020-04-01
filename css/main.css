@@ -7,6 +7,22 @@ Font
 @import url("https://fonts.googleapis.com/css?family=IBM+Plex+Serif");
 /* Colors */
 /* Heading */
+/* Global */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 body {
   background: -webkit-gradient(linear, left bottom, left top, from(#f9fafb), to(#ffffff));
   background: linear-gradient(to top, #f9fafb 0%, #ffffff 100%);
@@ -15,10 +31,7 @@ body {
 }
 
 .wrap {
-  max-width: 1200px;
   position: relative;
-  height: 100vh;
-  width: 100vh;
   margin: 0 auto;
 }
 
@@ -27,8 +40,8 @@ body {
   overflow: hidden;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -65,7 +78,6 @@ body {
   padding: 10px;
   text-align: center;
   background-color: #f9fafb;
-  z-index: 999;
 }
 
 .profile-card .avatar {
@@ -151,19 +163,38 @@ body {
   overflow: hidden;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-20%, -50%);
           transform: translate(-20%, -50%);
+  width: 500px;
   border: 1px #c4c8cc solid;
 }
 
 .secondary-card:hover {
   -webkit-box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.secondary-card .btn-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.secondary-card .btn-close:hover {
+  cursor: pointer;
+}
+
+.btn span.icon {
+  background: url(../img/icons/close.svg) no-repeat;
+  width: 20px;
+  height: 20px;
+  z-index: inherit;
+  float: left;
 }
 
 /* About me Card */
@@ -266,14 +297,47 @@ body {
 
 .hidden {
   visibility: hidden;
+  display: none;
 }
 
 .show {
   visibility: visible;
+  display: block;
 }
 
 .fade-out-card {
   -webkit-transition-delay: 1s;
           transition-delay: 1s;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 800px) {
+  .wrap {
+    position: static;
+  }
+  .secondary-card {
+    position: static;
+    width: 100%;
+    -webkit-transform: none;
+            transform: none;
+    border: none;
+  }
+  .secondary-card .profile-card {
+    padding: 20px;
+  }
+  .secondary-card .about-me-card {
+    padding: 20px;
+  }
+  .primary-card.show {
+    position: static;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  .primary-card.show .profile-card {
+    margin: 0 auto;
+    padding: 0;
+    border: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */
