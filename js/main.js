@@ -41,8 +41,8 @@ function onClickSlideOut(section) {
 			}
 		});
 	} else {
-		// hideCard(primaryCard);
-		resetPrimaryCardAndShow();
+		hideCard(primaryCard);
+		// resetPrimaryCardAndShow();
 		switch (section) {
 			case "projects":
 				// fadeOutCard(projectCard);
@@ -82,8 +82,8 @@ function onClickSlideIn() {
 	} else {
 		hideCard(projectCard);
 		hideCard(aboutMeCard);
-		// displayCard(primaryCard);
-		resetPrimaryCardAndNoShow();
+		displayCard(primaryCard);
+		// resetPrimaryCardAndNoShow();
 	}
 }
 
