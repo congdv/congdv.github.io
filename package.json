@@ -4,25 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel index.html --port 3000",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/congdv/congdv.github.io.git"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/congdv/congdv.github.io/issues"
   },
   "homepage": "https://github.com/congdv/congdv.github.io#readme",
-  "devDependencies": {
-    "parcel-bundler": "^1.12.4"
-  },
   "dependencies": {
-    "global": "^4.4.0",
-    "sass": "^1.26.10"
+    "express": "^4.17.1"
   }
 }
