@@ -5,7 +5,11 @@ const app = express();
 
 const port = 3000;
 
-app.use(express.static(__dirname));
+// Serve js files
+app.use('/js', express.static(path.join(__dirname, 'js/')));
+// Serve css files
+app.use('/css', express.static(path.join(__dirname, 'css/')));
+
 
 app.get('/', (req, res) => {
   res.sendfile(path.join(__dirname + "/index.html"));
