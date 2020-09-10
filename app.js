@@ -9,6 +9,8 @@ const port = 3000;
 app.use('/js', express.static(path.join(__dirname, 'js/')));
 // Serve css files
 app.use('/css', express.static(path.join(__dirname, 'css/')));
+// Serve css files
+app.use('/img', express.static(path.join(__dirname, 'img/')));
 
 
 app.get('/', (req, res) => {
