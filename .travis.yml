@@ -1,0 +1,23 @@
+# Set the language
+language: node_js
+
+# Set the Node version
+node_js:
+  - '12'
+
+services:
+  # Use Docker command line
+  - docker
+
+install: 
+  - npm ci
+
+before_script:
+  - npm start 
+
+deploy:
+  # Build Docker contaienr and push to Docker Hub
+  provider: script
+  script: bash deploy.sh
+  on: 
+    branch: master
