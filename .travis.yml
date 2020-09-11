@@ -15,6 +15,9 @@ install:
 before_script:
   - npm start &
 
+script:
+  - echo "skipping tests"
+
 deploy:
   # Build Docker contaienr and push to Docker Hub
   provider: script
